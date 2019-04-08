@@ -1,14 +1,15 @@
 {
-  "main.css": "/Music-Song-App/static/css/main.cfccd609.chunk.css",
-  "main.js": "/Music-Song-App/static/js/main.b4207a23.chunk.js",
-  "main.js.map": "/Music-Song-App/static/js/main.b4207a23.chunk.js.map",
+  "main.css": "/Music-Song-App/static/css/main.2bb69bb2.chunk.css",
+  "main.js": "/Music-Song-App/static/js/main.e3055021.chunk.js",
+  "main.js.map": "/Music-Song-App/static/js/main.e3055021.chunk.js.map",
   "runtime~main.js": "/Music-Song-App/static/js/runtime~main.7067adf5.js",
   "runtime~main.js.map": "/Music-Song-App/static/js/runtime~main.7067adf5.js.map",
-  "static/js/2.43e02aa2.chunk.js": "/Music-Song-App/static/js/2.43e02aa2.chunk.js",
-  "static/js/2.43e02aa2.chunk.js.map": "/Music-Song-App/static/js/2.43e02aa2.chunk.js.map",
+  "static/js/2.e2ed4294.chunk.js": "/Music-Song-App/static/js/2.e2ed4294.chunk.js",
+  "static/js/2.e2ed4294.chunk.js.map": "/Music-Song-App/static/js/2.e2ed4294.chunk.js.map",
   "index.html": "/Music-Song-App/index.html",
-  "precache-manifest.e38cccf8e31824959c9a75ba25473531.js": "/Music-Song-App/precache-manifest.e38cccf8e31824959c9a75ba25473531.js",
+  "precache-manifest.646644b23156eb20090144283f4346fd.js": "/Music-Song-App/precache-manifest.646644b23156eb20090144283f4346fd.js",
   "service-worker.js": "/Music-Song-App/service-worker.js",
-  "static/css/main.cfccd609.chunk.css.map": "/Music-Song-App/static/css/main.cfccd609.chunk.css.map",
+  "static/css/main.2bb69bb2.chunk.css.map": "/Music-Song-App/static/css/main.2bb69bb2.chunk.css.map",
+  "static/media/music-black-white-rotate.jpg": "/Music-Song-App/static/media/music-black-white-rotate.7223fc14.jpg",
   "static/media/music-black-white.jpg": "/Music-Song-App/static/media/music-black-white.1c419989.jpg"
 }
