@@ -1,8 +1,8 @@
 {
   "name": "music-song-app",
-  "homepage": "https://github.com/Suavek85/Music-Song-App/",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://suavek85.github.io/Music-Song-App/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
