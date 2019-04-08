@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/Suavek85/Music-Song-App/static/js/runtime~main.31120195.js"
   },
   {
-    "revision": "4b55868719c9fb8e82e0",
-    "url": "/Suavek85/Music-Song-App/static/js/main.2bdbc14a.chunk.js"
+    "revision": "67674185cf562316b6c2",
+    "url": "/Suavek85/Music-Song-App/static/js/main.6ddc3460.chunk.js"
   },
   {
     "revision": "d928e00c5d9a690d7936",
     "url": "/Suavek85/Music-Song-App/static/js/2.6452f0e0.chunk.js"
   },
   {
-    "revision": "4b55868719c9fb8e82e0",
+    "revision": "67674185cf562316b6c2",
     "url": "/Suavek85/Music-Song-App/static/css/main.cfccd609.chunk.css"
   },
   {
-    "revision": "7a2e6a0be039b54c4717d3524febff92",
+    "revision": "dd3ae2445e005d9f5207af8a02063534",
     "url": "/Suavek85/Music-Song-App/index.html"
   }
 ];
