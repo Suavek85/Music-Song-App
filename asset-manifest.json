@@ -1,14 +1,14 @@
 {
-  "main.css": "/Suavek85/Music-Song-App/static/css/main.cfccd609.chunk.css",
-  "main.js": "/Suavek85/Music-Song-App/static/js/main.6ddc3460.chunk.js",
-  "main.js.map": "/Suavek85/Music-Song-App/static/js/main.6ddc3460.chunk.js.map",
-  "runtime~main.js": "/Suavek85/Music-Song-App/static/js/runtime~main.31120195.js",
-  "runtime~main.js.map": "/Suavek85/Music-Song-App/static/js/runtime~main.31120195.js.map",
-  "static/js/2.6452f0e0.chunk.js": "/Suavek85/Music-Song-App/static/js/2.6452f0e0.chunk.js",
-  "static/js/2.6452f0e0.chunk.js.map": "/Suavek85/Music-Song-App/static/js/2.6452f0e0.chunk.js.map",
-  "index.html": "/Suavek85/Music-Song-App/index.html",
-  "precache-manifest.d01a6c4b4505e76edb57939501770e85.js": "/Suavek85/Music-Song-App/precache-manifest.d01a6c4b4505e76edb57939501770e85.js",
-  "service-worker.js": "/Suavek85/Music-Song-App/service-worker.js",
-  "static/css/main.cfccd609.chunk.css.map": "/Suavek85/Music-Song-App/static/css/main.cfccd609.chunk.css.map",
-  "static/media/music-black-white.jpg": "/Suavek85/Music-Song-App/static/media/music-black-white.1c419989.jpg"
+  "main.css": "/Music-Song-App/static/css/main.cfccd609.chunk.css",
+  "main.js": "/Music-Song-App/static/js/main.b4207a23.chunk.js",
+  "main.js.map": "/Music-Song-App/static/js/main.b4207a23.chunk.js.map",
+  "runtime~main.js": "/Music-Song-App/static/js/runtime~main.7067adf5.js",
+  "runtime~main.js.map": "/Music-Song-App/static/js/runtime~main.7067adf5.js.map",
+  "static/js/2.43e02aa2.chunk.js": "/Music-Song-App/static/js/2.43e02aa2.chunk.js",
+  "static/js/2.43e02aa2.chunk.js.map": "/Music-Song-App/static/js/2.43e02aa2.chunk.js.map",
+  "index.html": "/Music-Song-App/index.html",
+  "precache-manifest.e38cccf8e31824959c9a75ba25473531.js": "/Music-Song-App/precache-manifest.e38cccf8e31824959c9a75ba25473531.js",
+  "service-worker.js": "/Music-Song-App/service-worker.js",
+  "static/css/main.cfccd609.chunk.css.map": "/Music-Song-App/static/css/main.cfccd609.chunk.css.map",
+  "static/media/music-black-white.jpg": "/Music-Song-App/static/media/music-black-white.1c419989.jpg"
 }

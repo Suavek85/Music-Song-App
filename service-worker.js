@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Suavek85/Music-Song-App/precache-manifest.d01a6c4b4505e76edb57939501770e85.js"
+  "/Music-Song-App/precache-manifest.e38cccf8e31824959c9a75ba25473531.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Suavek85/Music-Song-App/index.html", {
+workbox.routing.registerNavigationRoute("/Music-Song-App/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
