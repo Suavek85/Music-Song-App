@@ -23,7 +23,7 @@ const Header = ({ buttonSubmit, searchChange }) => {
                   </a>
                 </div>
                 <div className="dtc v-mid tr pa3">
-                  <a className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/" >Your Favorite</a> 
+                  <a className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/" >Favorite</a> 
                   <a className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="/" >Songs</a> 
                   <a className="f6 fw4 hover-white no-underline white-70 dn dib-l pv2 ph3" href="/" >About</a> 
                   <a className="f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba" href="/" >Sign Up</a> 

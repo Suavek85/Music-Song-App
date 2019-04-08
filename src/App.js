@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import CardList from './components/CardList/CardList';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 class App extends Component {
@@ -71,6 +72,7 @@ class App extends Component {
       <div className="App">
         <Header searchChange={this.onSearchChange} buttonSubmit={this.onButtonSubmit} />
         <CardList isMusic={this.state.cardsShow} music={this.state.music} />
+        <Footer />
       </div>
     );
   }
