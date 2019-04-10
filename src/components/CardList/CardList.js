@@ -8,14 +8,13 @@ const CardList = ( { isMusic, music }) => {
 
     return (<p>Search now</p>)
 
-
    } else {
 
     return (<div className="flex flex-wrap relative justify-center">{
 
         music.map((el, i) => {
     
-            return <Card key={i} track={el.track} album={el.album} artist={el.artist} / >  })
+            return <Card key={i} track={el.track} album={el.album} artist={el.artist} favClicked={el.favClicked} / >  })
           
     }</div>);
 

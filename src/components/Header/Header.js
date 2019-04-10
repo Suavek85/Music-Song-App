@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import Background from './images/music-black-white.jpg';
-import PinkMusicIcon from './Logo/Logo';
+import PinkMusicIcon from '../Logo/Logo';
 import Search from '../Search/Search';
 
 

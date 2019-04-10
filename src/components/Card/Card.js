@@ -1,13 +1,15 @@
 import React from 'react';
-import Logo from '../Header/Logo/Logo'
+import Logo from '../Logo/Logo'
 import RedFavoriteEmpty from '../FavoriteIcon/FavoriteIcon'
+import RedFavoriteFull from '../FavoriteIconFull/FavoriteIconFull'
+
 
 const Card = (props) => {
 
 return (
 
     <article className=" mw5 center relative bg-white br3 pa3 pa4-ns mv5 ba b--black-10">
-        <RedFavoriteEmpty absolute top-10 left-10 hvr-pulse />
+        { props.favClicked ? <RedFavoriteFull absolute top-10 left-10 hvr-pulse /> : <RedFavoriteEmpty absolute top-10 left-10 hvr-pulse /> }
         <div className="tc">
             <Logo />
             <h1 className="f3 mb2 pb3 dark-red">{props.track}</h1>
@@ -17,5 +19,6 @@ return (
     </article>
     );
 }
+
 
 export default Card;

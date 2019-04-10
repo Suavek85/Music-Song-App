@@ -1,8 +1,7 @@
-
 import styled from 'styled-components'
-import {FavoriteBorder} from 'styled-icons/material/FavoriteBorder'
+import {Favorite} from 'styled-icons/material/Favorite'
 
-const RedFavoriteEmpty = styled(FavoriteBorder)`
+const RedFavoriteFull = styled(Favorite)`
   color: rgba(0,0,0,.3);
   width: 32px;
   height: 32px;
@@ -17,4 +16,4 @@ const RedFavoriteEmpty = styled(FavoriteBorder)`
     transform: scale(1.1);
   };
 `
-export default RedFavoriteEmpty;
+export default RedFavoriteFull;
