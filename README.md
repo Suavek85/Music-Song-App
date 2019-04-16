@@ -4,9 +4,11 @@ Song Finder - Music App - in React
 
 - own idea.
 
-Functionalities:
+Features:
 
 - find current Top 3 song of any artist
+
+- mark your songs as Favorites
 
 Built using: 
 

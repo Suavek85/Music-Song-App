@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import Header from './components/Header/Header';
-import CardList from './components/CardList/CardList';
-import Footer from './components/Footer/Footer';
+import Header from '../components/Header/Header';
+import CardList from '../components/CardList/CardList';
+import Footer from '../components/Footer/Footer';
 import './App.css';
 
 class App extends Component {
   
-  constructor() {
+  constructor(props) {
 
-    super();
-  
+    super(props);
+    this.onFavClick = this.onFavClick.bind(this);
+
     this.state = {
   
-      input: '',
+      input: 'Justin Bieber',
       cardsShow: false,
       music: [
-        { track: '', album: '', artist: '', favClicked: ''},
-        { track: '', album: '', artist: '', favClicked: ''},
-        { track: '', album: '', artist: '', favClicked: ''}
-      ] 
+        { track: '', album: '', artist: '', favClicked: true, id: 0},
+        { track: '', album: '', artist: '', favClicked: true, id: 1},
+        { track: '', album: '', artist: '', favClicked: true, id: 2}
+      ],
+      favsArray: []
     }
+
+    
   } 
 
 
@@ -43,37 +47,52 @@ class App extends Component {
             { track: res.message.body.track_list[0].track.track_name, 
               album: res.message.body.track_list[0].track.album_name, 
               artist: res.message.body.track_list[0].track.artist_name,
-              favClicked: false},
+              id: res.message.body.track_list[0].track.track_id,
+              favClicked: false
+            },
             { track: res.message.body.track_list[1].track.track_name, 
               album: res.message.body.track_list[1].track.album_name, 
               artist: res.message.body.track_list[1].track.artist_name,
+              id: res.message.body.track_list[1].track.track_id,
               favClicked:false
             },
             { track: res.message.body.track_list[2].track.track_name, 
               album: res.message.body.track_list[2].track.album_name, 
               artist: res.message.body.track_list[2].track.artist_name,
+              id: res.message.body.track_list[2].track.track_id,
               favClicked:false
             },
             ] 
           });
   
-          this.setState( {
-            cardsShow: true,
-          });
+          this.setState({ cardsShow: true });
 
-      
-      
         } 
       });
     }
 
-
-
   onSearchChange = event => {
     this.setState({ input: event.target.value });
-    console.log(event.target.value);
   };
 
+  onFavClick = event  => {
+
+    let target = event.target.id;
+    
+ 
+    this.setState( prevState => {
+      let songIndex = prevState.music.findIndex( el => el.id === parseFloat(target));
+      let toUpdate = prevState.music[songIndex].favClicked;
+      let newMusic = [...prevState.music];
+      newMusic[songIndex].favClicked = !toUpdate;
+      return {music: newMusic};
+      }
+    );
+
+      //CREATE OBJECT LITERAL AND PUSH NEW OBJECT INTO IT
+      //this.state.favsArray.push({ track: track, album: album, artist:artist, id:id, favlicked:favclicked})
+      //}
+    }
 
    onButtonSubmit = () => {
      
@@ -95,19 +114,23 @@ class App extends Component {
             { track: res.message.body.track_list[0].track.track_name, 
               album: res.message.body.track_list[0].track.album_name, 
               artist: res.message.body.track_list[0].track.artist_name,
-              favClicked: true},
+              id: res.message.body.track_list[0].track.track_id,
+              favClicked: false},
             { track: res.message.body.track_list[1].track.track_name, 
               album: res.message.body.track_list[1].track.album_name, 
               artist: res.message.body.track_list[1].track.artist_name,
-              favClicked:true
+              id: res.message.body.track_list[1].track.track_id,
+              favClicked:false
             },
             { track: res.message.body.track_list[2].track.track_name, 
               album: res.message.body.track_list[2].track.album_name, 
               artist: res.message.body.track_list[2].track.artist_name,
-              favClicked:true
+              id: res.message.body.track_list[2].track.track_id,
+              favClicked:false
             },
             ] 
           });
+          console.log(this.state.music)
   
           this.setState( {
             cardsShow: true,
@@ -123,14 +146,14 @@ class App extends Component {
         } 
       });
   }
-  
+
 
   render() {
 
     return (
       <div className="App">
         <Header searchChange={this.onSearchChange} buttonSubmit={this.onButtonSubmit} />
-        <CardList isMusic={this.state.cardsShow} music={this.state.music} />
+        <CardList onFavClick={this.onFavClick} isMusic={this.state.cardsShow} music={this.state.music} input={this.state.input} />
         <Footer />
       </div>
     );

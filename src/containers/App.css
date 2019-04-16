@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.fav-wrapper > * {
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.fav-wrapper {
+  cursor: pointer;
+}
+
+
