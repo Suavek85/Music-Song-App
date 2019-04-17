@@ -9,8 +9,7 @@ class App extends Component {
   constructor(props) {
 
     super(props);
-    this.onFavClick = this.onFavClick.bind(this);
-
+   
     this.state = {
   
       input: 'Justin Bieber',
@@ -21,11 +20,8 @@ class App extends Component {
         { track: '', album: '', artist: '', favClicked: true, id: 2}
       ],
       favsArray: []
-    }
-
-    
+    } 
   } 
-
 
   componentDidMount() {
 
@@ -34,7 +30,7 @@ class App extends Component {
 
     fetch(url)
       .then(data => {
-      
+  
         return data.json()
         
       })
@@ -42,29 +38,19 @@ class App extends Component {
 
         if (res.message.header.available !== 0) {
 
-          this.setState( {
-            music: [
-            { track: res.message.body.track_list[0].track.track_name, 
-              album: res.message.body.track_list[0].track.album_name, 
-              artist: res.message.body.track_list[0].track.artist_name,
-              id: res.message.body.track_list[0].track.track_id,
-              favClicked: false
-            },
-            { track: res.message.body.track_list[1].track.track_name, 
-              album: res.message.body.track_list[1].track.album_name, 
-              artist: res.message.body.track_list[1].track.artist_name,
-              id: res.message.body.track_list[1].track.track_id,
-              favClicked:false
-            },
-            { track: res.message.body.track_list[2].track.track_name, 
-              album: res.message.body.track_list[2].track.album_name, 
-              artist: res.message.body.track_list[2].track.artist_name,
-              id: res.message.body.track_list[2].track.track_id,
-              favClicked:false
-            },
-            ] 
-          });
-  
+          this.setState( (prevState) => {
+            const onloadMusic = prevState.music;
+            onloadMusic.forEach( (el,i) => {
+              el.track = res.message.body.track_list[i].track.track_name;
+              el.album = res.message.body.track_list[i].track.album_name; 
+              el.artist = res.message.body.track_list[i].track.artist_name;
+              el.id = res.message.body.track_list[i].track.track_id;
+              el.favClicked = false
+            })
+            return {music: onloadMusic}
+            } 
+          );
+
           this.setState({ cardsShow: true });
 
         } 
@@ -75,24 +61,33 @@ class App extends Component {
     this.setState({ input: event.target.value });
   };
 
+
   onFavClick = event  => {
 
-    let target = event.target.id;
-    
- 
-    this.setState( prevState => {
-      let songIndex = prevState.music.findIndex( el => el.id === parseFloat(target));
-      let toUpdate = prevState.music[songIndex].favClicked;
-      let newMusic = [...prevState.music];
-      newMusic[songIndex].favClicked = !toUpdate;
-      return {music: newMusic};
-      }
-    );
-
-      //CREATE OBJECT LITERAL AND PUSH NEW OBJECT INTO IT
-      //this.state.favsArray.push({ track: track, album: album, artist:artist, id:id, favlicked:favclicked})
-      //}
+    const target = event.target.id;
+    const songIndex = this.state.music.findIndex( el => el.id === parseFloat(target));
+    const songItem = {
+      track: this.state.music[songIndex].track, 
+      album:this.state.music[songIndex].album, 
+      artist:this.state.music[songIndex].artist, 
+      id:this.state.music[songIndex].id, 
+      favlicked: this.state.music[songIndex].favclicked
     }
+    
+    this.setState( prevState => {
+     
+      const toUpdate = prevState.music[songIndex].favClicked;
+      const newMusic = [...prevState.music];
+      newMusic[songIndex].favClicked = !toUpdate;
+      return { music: newMusic };
+      });
+
+    this.setState( prevState => {
+      const newFavsArray = [...prevState.favsArray, songItem];
+      return { favsArray: newFavsArray };
+    });
+   
+  }
 
    onButtonSubmit = () => {
      
@@ -109,28 +104,18 @@ class App extends Component {
 
         if (res.message.header.available !== 0) {
 
-          this.setState( {
-            music: [
-            { track: res.message.body.track_list[0].track.track_name, 
-              album: res.message.body.track_list[0].track.album_name, 
-              artist: res.message.body.track_list[0].track.artist_name,
-              id: res.message.body.track_list[0].track.track_id,
-              favClicked: false},
-            { track: res.message.body.track_list[1].track.track_name, 
-              album: res.message.body.track_list[1].track.album_name, 
-              artist: res.message.body.track_list[1].track.artist_name,
-              id: res.message.body.track_list[1].track.track_id,
-              favClicked:false
-            },
-            { track: res.message.body.track_list[2].track.track_name, 
-              album: res.message.body.track_list[2].track.album_name, 
-              artist: res.message.body.track_list[2].track.artist_name,
-              id: res.message.body.track_list[2].track.track_id,
-              favClicked:false
-            },
-            ] 
-          });
-          console.log(this.state.music)
+          this.setState( (prevState) => {
+            const onloadMusic = prevState.music;
+            onloadMusic.forEach( (el,i) => {
+              el.track = res.message.body.track_list[i].track.track_name;
+              el.album = res.message.body.track_list[i].track.album_name; 
+              el.artist = res.message.body.track_list[i].track.artist_name;
+              el.id = res.message.body.track_list[i].track.track_id;
+              el.favClicked = false
+            })
+            return {music: onloadMusic}
+            } 
+          );
   
           this.setState( {
             cardsShow: true,
