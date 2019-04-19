@@ -1,12 +1,12 @@
-import React from "react";
-import "./Header.css";
-import Background from "./images/music-black-white.jpg";
-import PinkMusicIcon from "../Logo/Logo";
-import Search from "../Search/Search";
+import React from 'react';
+import './Header.css';
+import Background from './images/music-black-white.jpg';
+import PinkMusicIcon from '../Logo/Logo';
+import Search from '../Search/Search';
 
 const Header = ({ buttonSubmit, buttonFavs, searchChange }) => {
   const backImageStyle = {
-    backgroundImage: `url(${ Background })`
+    backgroundImage: `url(${ Background })`,
   };
 
   return (

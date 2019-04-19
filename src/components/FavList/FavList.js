@@ -5,14 +5,13 @@ const FavList = ({ cardsShow, music, onFavClick }) => {
   if (!cardsShow) {
     return (
       <div>
-        <h1 className="f1 lh-title gray">Your Favorties</h1>
+        <h1 className="f1 lh-title gray">Your Favorites</h1>
         <div className="flex flex-wrap relative justify-center">
-          {' '}
-          {music.map((el, i) => {
+          {music.map((el) => {
             return (
               <Card
                 onFavClick={onFavClick}
-                key={i}
+                key={el.id}
                 id={el.id}
                 track={el.track}
                 album={el.album}
@@ -24,9 +23,8 @@ const FavList = ({ cardsShow, music, onFavClick }) => {
         </div>
       </div>
     );
-  } else {
-    return null;
   }
+  return null;
 };
 
 export default FavList;

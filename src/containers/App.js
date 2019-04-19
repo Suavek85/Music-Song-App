@@ -1,3 +1,5 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
 import Header from '../components/Header/Header';
 import CardList from '../components/CardList/CardList';
@@ -19,21 +21,21 @@ class App extends Component {
           album: '',
           artist: '',
           favClicked: true,
-          id: 0
+          id: 0,
         },
         {
           track: '',
           album: '',
           artist: '',
           favClicked: true,
-          id: 1
+          id: 1,
         },
         {
           track: '',
           album: '',
           artist: '',
           favClicked: true,
-          id: 2
+          id: 2,
         }
       ],
       favsArray: []
@@ -45,7 +47,7 @@ class App extends Component {
     const url = `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_artist=justin bieber&page_size=3&page=1&s_track_rating=desc & apikey=${apiKey}`;
 
     fetch(url)
-      .then( data => {
+      .then(data => {
         return data.json();
       })
       .then(res => {
@@ -60,12 +62,12 @@ class App extends Component {
               el.favClicked = false;
             });
             return {
-              music: onloadMusic
+              music: onloadMusic,
             };
           });
 
           this.setState({
-            cardsShow: true
+            cardsShow: true,
           });
         }
       });
@@ -73,7 +75,7 @@ class App extends Component {
 
   onSearchChange = event => {
     this.setState({
-      input: event.target.value
+      input: event.target.value,
     });
   };
 
@@ -88,7 +90,7 @@ class App extends Component {
         album: this.state.music[songIndex].album,
         artist: this.state.music[songIndex].artist,
         id: this.state.music[songIndex].id,
-        favClicked: !this.state.music[songIndex].favClicked
+        favClicked: !this.state.music[songIndex].favClicked,
       };
 
       this.setState(prevState => {
@@ -96,7 +98,7 @@ class App extends Component {
         const newMusic = [...prevState.music];
         newMusic[songIndex].favClicked = !toUpdate;
         return {
-          music: newMusic
+          music: newMusic,
         };
       });
 
@@ -105,14 +107,13 @@ class App extends Component {
         const alreadyFav = prevFavsArray.find(
           el => el.id === parseFloat(songItem.id)
         );
-        console.log(alreadyFav);
-
+      
         if (songItem.favClicked && alreadyFav === undefined) {
           const newFavsArray = [...prevState.favsArray, songItem];
           return {
-            favsArray: newFavsArray
+            favsArray: newFavsArray,
           };
-        }
+        } return null;
       });
     }
   };
@@ -143,7 +144,7 @@ class App extends Component {
               el.favClicked = false;
             });
             return {
-              music: onloadMusic
+              music: onloadMusic,
             };
           });
           scrollDownSmooth();
@@ -153,30 +154,30 @@ class App extends Component {
 
   onButtonFavs = () => {
     this.setState({
-      cardsShow: false
+      cardsShow: false,
     });
     scrollDownSmooth();
   };
 
-  render() {
+  render() {   
     return (
       <div className="App">
         <Header
           searchChange={this.onSearchChange}
           buttonSubmit={this.onButtonSubmit}
           buttonFavs={this.onButtonFavs}
-        />{' '}
+        />
         <CardList
           onFavClick={this.onFavClick}
           cardsShow={this.state.cardsShow}
           music={this.state.music}
           input={this.state.input}
-        />{' '}
+        />
         <FavList
           onFavClick={this.onFavClick}
           cardsShow={this.state.cardsShow}
           music={this.state.favsArray}
-        />{' '}
+        />
         <Footer />
       </div>
     );
