@@ -1,5 +1,7 @@
 Song Finder - Music App - in React
 
+https://suavek85.github.io/Music-Song-App/
+
 - in progress
 
 - own idea.
@@ -8,7 +10,7 @@ Features:
 
 - find current Top 3 song of any artist
 
-- mark your songs as Favorites
+- mark and save your songs as Favorites 
 
 Built using: 
 

@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Header from '../components/Header/Header';
 import CardList from '../components/CardList/CardList';
+import FavList from '../components/FavList/FavList';
 import Footer from '../components/Footer/Footer';
+import scrollDownSmooth from '../components/Animations/Animations';
 import './App.css';
 
 class App extends Component {
@@ -13,7 +15,7 @@ class App extends Component {
     this.state = {
   
       input: 'Justin Bieber',
-      cardsShow: false,
+      cardsShow: true,
       music: [
         { track: '', album: '', artist: '', favClicked: true, id: 0},
         { track: '', album: '', artist: '', favClicked: true, id: 1},
@@ -52,7 +54,6 @@ class App extends Component {
           );
 
           this.setState({ cardsShow: true });
-
         } 
       });
     }
@@ -61,32 +62,37 @@ class App extends Component {
     this.setState({ input: event.target.value });
   };
 
-
   onFavClick = event  => {
 
-    const target = event.target.id;
-    const songIndex = this.state.music.findIndex( el => el.id === parseFloat(target));
-    const songItem = {
-      track: this.state.music[songIndex].track, 
-      album:this.state.music[songIndex].album, 
-      artist:this.state.music[songIndex].artist, 
-      id:this.state.music[songIndex].id, 
-      favlicked: this.state.music[songIndex].favclicked
-    }
-    
-    this.setState( prevState => {
-     
-      const toUpdate = prevState.music[songIndex].favClicked;
-      const newMusic = [...prevState.music];
-      newMusic[songIndex].favClicked = !toUpdate;
-      return { music: newMusic };
-      });
+    if (this.state.cardsShow) {
+      const target = event.target.id;
+      const songIndex = this.state.music.findIndex( el => el.id === parseFloat(target));
+      const songItem = {
+        track: this.state.music[songIndex].track, 
+        album:this.state.music[songIndex].album, 
+        artist:this.state.music[songIndex].artist, 
+        id:this.state.music[songIndex].id, 
+        favClicked: !this.state.music[songIndex].favClicked
+      }
+      
+      this.setState( prevState => {
+        const toUpdate = prevState.music[songIndex].favClicked;
+        const newMusic = [...prevState.music];
+        newMusic[songIndex].favClicked = !toUpdate;
+        return { music: newMusic };
+        });
+  
+      this.setState( prevState => {
+        const prevFavsArray = [...prevState.favsArray];
+        const alreadyFav = prevFavsArray.find( el => el.id === parseFloat(songItem.id))
+        console.log(alreadyFav)
 
-    this.setState( prevState => {
-      const newFavsArray = [...prevState.favsArray, songItem];
-      return { favsArray: newFavsArray };
-    });
-   
+        if (songItem.favClicked && alreadyFav === undefined) {
+          const newFavsArray = [...prevState.favsArray, songItem];
+          return { favsArray: newFavsArray };
+        }
+      });
+    }
   }
 
    onButtonSubmit = () => {
@@ -96,14 +102,16 @@ class App extends Component {
 
     fetch(url)
       .then(data => {
-      
         return data.json()
-        
       })
       .then(res => {
 
         if (res.message.header.available !== 0) {
 
+          this.setState( {
+            cardsShow: true
+          });
+          
           this.setState( (prevState) => {
             const onloadMusic = prevState.music;
             onloadMusic.forEach( (el,i) => {
@@ -116,20 +124,14 @@ class App extends Component {
             return {music: onloadMusic}
             } 
           );
-  
-          this.setState( {
-            cardsShow: true,
-          });
-
-         window.scrollTo({
-            top: 700,
-            left: 0,
-            behavior: 'smooth'
-          }
-         )
-      
+          scrollDownSmooth();
         } 
       });
+  }
+
+  onButtonFavs = () => {
+    this.setState( {cardsShow: false });
+    scrollDownSmooth();
   }
 
 
@@ -137,8 +139,9 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header searchChange={this.onSearchChange} buttonSubmit={this.onButtonSubmit} />
-        <CardList onFavClick={this.onFavClick} isMusic={this.state.cardsShow} music={this.state.music} input={this.state.input} />
+        <Header searchChange={this.onSearchChange} buttonSubmit={this.onButtonSubmit} buttonFavs={this.onButtonFavs} />
+        <CardList onFavClick={this.onFavClick} cardsShow={this.state.cardsShow} music={this.state.music} input={this.state.input} />
+        <FavList onFavClick={this.onFavClick} cardsShow={this.state.cardsShow} music={this.state.favsArray} />
         <Footer />
       </div>
     );

@@ -2,13 +2,13 @@ import React from 'react';
 import Card from '../Card/Card';
 
 
-const CardList = ( { cardsShow, music, onFavClick, input } ) => {
+const FavList = ( { cardsShow, music, onFavClick } ) => {
 
-   if (cardsShow) {
+   if (!cardsShow)  {
 
     return (
     <div>
-        <h1 className="f1 lh-title gray" >Top Songs by "{input}" </h1>
+        <h1 className="f1 lh-title gray" >Your Favorties</h1>
         <div className="flex flex-wrap relative justify-center"> {
             music.map((el, i) => {
                 return <Card onFavClick={onFavClick} key={i} id={el.id} track={el.track} album={el.album} artist={el.artist} favClicked={el.favClicked} />  }   
@@ -17,8 +17,11 @@ const CardList = ( { cardsShow, music, onFavClick, input } ) => {
     </div>
     ); 
    } else {
-    return ( null )
-   } 
+
+    return (null)
+   }
+
+
 } 
 
-export default CardList;
+export default FavList;
