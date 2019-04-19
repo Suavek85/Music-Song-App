@@ -6,7 +6,6 @@
         "curly": 0,
         "linebreak-style": ["error", "windows"],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "click-events-have-key-events": 0,
     }
   
   }

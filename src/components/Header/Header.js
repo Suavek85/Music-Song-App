@@ -3,8 +3,9 @@ import './Header.css';
 import Background from './images/music-black-white.jpg';
 import PinkMusicIcon from '../Logo/Logo';
 import Search from '../Search/Search';
+import FavBadge from '../FavBadge/FavBadge'
 
-const Header = ({ buttonSubmit, buttonFavs, searchChange }) => {
+const Header = ({ buttonSubmit, buttonFavs, searchChange, favsCount }) => {
   const backImageStyle = {
     backgroundImage: `url(${ Background })`,
   };
@@ -22,9 +23,10 @@ const Header = ({ buttonSubmit, buttonFavs, searchChange }) => {
             <div className="dtc v-mid tr pa3">
               <div
                 onClick={buttonFavs}
-                className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3 pointer"
+                className="relative f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3 pointer"
               >
                 Favorites
+                <FavBadge favsCount={favsCount} />
               </div>
               <a
                 className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3"

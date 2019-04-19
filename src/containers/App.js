@@ -1,5 +1,4 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/no-unused-state */
+
 import React, { Component } from 'react';
 import Header from '../components/Header/Header';
 import CardList from '../components/CardList/CardList';
@@ -166,6 +165,7 @@ class App extends Component {
           searchChange={this.onSearchChange}
           buttonSubmit={this.onButtonSubmit}
           buttonFavs={this.onButtonFavs}
+          favsCount={this.state.favsArray.length}
         />
         <CardList
           onFavClick={this.onFavClick}

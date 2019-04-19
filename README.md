@@ -10,7 +10,9 @@ Features:
 
 - find current Top 3 song of any artist
 
-- mark and save your songs as Favorites 
+- mark and save your songs as Favorites
+
+- open your Favorite songs from Favorite tab in the top nav
 
 Built using: 
 
