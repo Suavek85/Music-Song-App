@@ -20,4 +20,6 @@ Built using:
 
 - Musixmatch API,
 
-- Styled Icons.
+- Styled Icons,
+
+- Eslint, Airbnb style.
