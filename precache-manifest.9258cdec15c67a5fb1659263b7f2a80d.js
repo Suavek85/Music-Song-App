@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/Music-Song-App/static/js/runtime~main.7067adf5.js"
   },
   {
-    "revision": "91da44a26eae4819b710",
-    "url": "/Music-Song-App/static/js/main.8cc91184.chunk.js"
+    "revision": "cf4ceec1e22aeffe49e2",
+    "url": "/Music-Song-App/static/js/main.19854688.chunk.js"
   },
   {
-    "revision": "fb677d9058d0248162ad",
-    "url": "/Music-Song-App/static/js/2.945e7cde.chunk.js"
+    "revision": "e72c9c1bc30dddd55fc0",
+    "url": "/Music-Song-App/static/js/2.b49f419e.chunk.js"
   },
   {
-    "revision": "91da44a26eae4819b710",
+    "revision": "cf4ceec1e22aeffe49e2",
     "url": "/Music-Song-App/static/css/main.573abb7e.chunk.css"
   },
   {
-    "revision": "da3f3cfdce799233e15de06f9d340aed",
+    "revision": "e9227aaf276e871be2c99e6924a78dfe",
     "url": "/Music-Song-App/index.html"
   }
 ];
