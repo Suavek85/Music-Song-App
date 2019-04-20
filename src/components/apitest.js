@@ -1,8 +1,4 @@
-data.message.body.track_list[0].track.track_name
-data.message.body.track_list[0].track.album_name
-data.message.body.track_list[0].track.artist_name
-data.message.header.available 
-
+// EXAMPLE RESPONSEgit 
 {
     "message": {
         "header": {

@@ -14,9 +14,9 @@ const FavBadge = ( props ) => {
     top: "50%",
     left: "50%",
     transform: "translate(-50%,-50%)",
-    border: "1px solid transparent",
+    border: "0,5px solid transparent",
     textShadow: "0 1px rgba(0, 0, 0, 0.25)",
-    color: "lightgrey"
+    color: "white"
   };
 
   return (

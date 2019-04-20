@@ -24,4 +24,6 @@ Built using:
 
 - Styled Icons,
 
-- Eslint, Airbnb style.
+- React Epic Spinners,
+
+- Eslint - Airbnb styling.
