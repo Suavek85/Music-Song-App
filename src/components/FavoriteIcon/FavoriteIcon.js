@@ -3,8 +3,8 @@ import { FavoriteBorder } from 'styled-icons/material/FavoriteBorder';
 
 const RedFavoriteEmpty = styled(FavoriteBorder)`
   color: rgba(0, 0, 0, 0.3);
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   color: red;
   cursor: pointer;
 `;

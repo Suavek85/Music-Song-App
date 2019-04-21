@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card';
 
-const CardList = ({ cardsShow, music, onFavClick, onMouseEntering, input }) => {
+const CardList = ({ cardsShow, music, onFavClick, input }) => {
   if (cardsShow) {
     return (
       <div>
@@ -19,6 +19,7 @@ const CardList = ({ cardsShow, music, onFavClick, onMouseEntering, input }) => {
                 album={el.album}
                 artist={el.artist}
                 favClicked={el.favClicked}
+                
               />
             );
           })}

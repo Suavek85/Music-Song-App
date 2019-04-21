@@ -1,6 +1,6 @@
 Song Finder - Music App - in React
 
-https://suavek85.github.io/Music-Song-App/
+Preview: https://suavek85.github.io/Music-Song-App/
 
 - in progress
 
@@ -12,11 +12,13 @@ Features:
 
 - mark and save your songs as Favorites
 
-- open your Favorite songs from Favorite tab in the top nav
+- open your Favorite songs (Favorite tab in the top nav)
+
+- remove you Favorite songs (Favorite tab in the top nav)
 
 Built using: 
 
-- React,
+- React.js,
 
 - Tachyons CSS toolkit, 
 
@@ -26,4 +28,4 @@ Built using:
 
 - React Epic Spinners,
 
-- Eslint - Airbnb styling.
+- Eslint-Airbnb.

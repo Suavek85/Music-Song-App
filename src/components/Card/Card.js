@@ -1,28 +1,39 @@
-import React from 'react';
-import Logo from '../Logo/Logo';
-import RedFavoriteEmpty from '../FavoriteIcon/FavoriteIcon';
-import RedFavoriteFull from '../FavoriteIconFull/FavoriteIconFull';
-
+import React from "react";
+import Logo from "../Logo/Logo";
+import RedFavoriteEmpty from "../FavoriteIcon/FavoriteIcon";
+import RedFavoriteFull from "../FavoriteIconFull/FavoriteIconFull";
+import GreyBin from "../BinIcon/BinIcon";
 
 const Card = props => {
+  const leftStyle = {
+    height: "32px",
+    width: "32px",
+    position: "absolute",
+    top: "10px",
+    left: "10px"
+  };
+
+  const rightStyle = {
+    height: "26px",
+    width: "26px",
+    position: "absolute",
+    top: "10px",
+    right: "10px"
+  };
   
-  const extraStyle = {
-    height: '32px',
-    width: '32px',
-    position: 'absolute',
-    top: '10px',
-    left: '10px',
-  }
-  
+
   return (
     <article className=" mw5 center relative bg-white br3 pa3 pa4-ns mv5 ba b--black-10">
       <div
-        className="fav-wrapper absolute top-10 left-10 grow-hov"
-        style={extraStyle}
+        className="fav-wrapper grow-hov"
+        style={leftStyle}
         id={props.id}
         onClick={props.onFavClick}
       >
         {props.favClicked ? <RedFavoriteFull /> : <RedFavoriteEmpty />}
+      </div>
+      <div onClick={props.onButtonRemove} data-id={props.id} className="fav-wrapper grow-hov" style={rightStyle}>
+        {props.addedToFav ? <GreyBin /> : null }
       </div>
       <div className="tc">
         <Logo />

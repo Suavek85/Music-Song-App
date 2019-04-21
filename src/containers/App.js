@@ -1,50 +1,52 @@
-
-import React, { Component } from 'react';
-import Header from '../components/Header/Header';
-import CardList from '../components/CardList/CardList';
-import FavList from '../components/FavList/FavList';
-import Footer from '../components/Footer/Footer';
-import Spinner from '../components/Spinner/Spinner';
-import './App.css';
-import scrollDownSmooth from '../components/Animations/Animations';
+import React, { Component } from "react";
+import Header from "../components/Header/Header";
+import CardList from "../components/CardList/CardList";
+import FavList from "../components/FavList/FavList";
+import Footer from "../components/Footer/Footer";
+import Spinner from "../components/Spinner/Spinner";
+import "./App.css";
+import scrollDownSmooth from "../components/Animations/Animations";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      input: 'Justin Bieber',
+      input: "Justin Bieber",
       isLoading: true,
       cardsShow: true,
       music: [
         {
-          track: '',
-          album: '',
-          artist: '',
+          track: "",
+          album: "",
+          artist: "",
           favClicked: false,
-          id: 0,
+          addedToFav: false,
+          id: 0
         },
         {
-          track: '',
-          album: '',
-          artist: '',
+          track: "",
+          album: "",
+          artist: "",
           favClicked: false,
-          id: 1,
+          addedToFav: false,
+          id: 1
         },
         {
-          track: '',
-          album: '',
-          artist: '',
+          track: "",
+          album: "",
+          artist: "",
           favClicked: false,
-          id: 2,
+          addedToFav: false,
+          id: 2
         }
       ],
-      favsArray: [],
+      favsArray: []
     };
   }
 
   componentDidMount() {
-    const apiKey = '22d91306931ee5a074eb08a71662cc98';
+    const apiKey = "22d91306931ee5a074eb08a71662cc98";
     const url = `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_artist=justin bieber&page_size=3&page=1&s_track_rating=desc & apikey=${apiKey}`;
 
     fetch(url)
@@ -53,7 +55,7 @@ class App extends Component {
       })
       .then(res => {
         if (res.message.header.available !== 0) {
-          this.setState({ isLoading: false })
+          this.setState({ isLoading: false });
           this.setState(prevState => {
             const onloadMusic = prevState.music;
             onloadMusic.forEach((el, i) => {
@@ -62,14 +64,15 @@ class App extends Component {
               el.artist = res.message.body.track_list[i].track.artist_name;
               el.id = res.message.body.track_list[i].track.track_id;
               el.favClicked = false;
+              el.addedToFav = false;
             });
             return {
-              music: onloadMusic,
+              music: onloadMusic
             };
           });
 
           this.setState({
-            cardsShow: true,
+            cardsShow: true
           });
         }
       });
@@ -77,7 +80,7 @@ class App extends Component {
 
   onSearchChange = event => {
     this.setState({
-      input: event.target.value,
+      input: event.target.value
     });
   };
 
@@ -93,14 +96,16 @@ class App extends Component {
         artist: this.state.music[songIndex].artist,
         id: this.state.music[songIndex].id,
         favClicked: !this.state.music[songIndex].favClicked,
+        addedToFav: true
       };
-      
+      console.log(songItem);
+
       this.setState(prevState => {
         const toUpdate = prevState.music[songIndex].favClicked;
         const newMusic = [...prevState.music];
         newMusic[songIndex].favClicked = !toUpdate;
         return {
-          music: newMusic,
+          music: newMusic
         };
       });
 
@@ -109,20 +114,21 @@ class App extends Component {
         const alreadyFav = prevFavsArray.find(
           el => el.id === parseFloat(songItem.id)
         );
-      
+
         if (songItem.favClicked && alreadyFav === undefined) {
           const newFavsArray = [...prevState.favsArray, songItem];
           return {
-            favsArray: newFavsArray,
+            favsArray: newFavsArray
           };
-        } return null;
+        }
+        return null;
       });
     }
   };
 
   onButtonSubmit = () => {
-    this.setState({ isLoading: true })
-    const apiKey = '22d91306931ee5a074eb08a71662cc98';
+    this.setState({ isLoading: true });
+    const apiKey = "22d91306931ee5a074eb08a71662cc98";
     const url = `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_artist=${
       this.state.input
     }&page_size=3&page=1&s_track_rating=desc & apikey=${apiKey}`;
@@ -136,7 +142,7 @@ class App extends Component {
           this.setState({
             cardsShow: true
           });
-          this.setState({ isLoading: false })
+          this.setState({ isLoading: false });
 
           this.setState(prevState => {
             const onloadMusic = prevState.music;
@@ -148,7 +154,7 @@ class App extends Component {
               el.favClicked = false;
             });
             return {
-              music: onloadMusic,
+              music: onloadMusic
             };
           });
           scrollDownSmooth();
@@ -158,12 +164,27 @@ class App extends Component {
 
   onButtonFavs = () => {
     this.setState({
-      cardsShow: false,
+      cardsShow: false
     });
     scrollDownSmooth();
   };
 
-  render() {   
+  onButtonRemove = event => {
+    const target = event.target.dataset.id;
+    const removeIndex = this.state.favsArray.findIndex(
+      el => el.id === parseFloat(target)
+    );
+
+    this.setState(prevState => {
+      const prevFavsArray = [...prevState.favsArray];
+      prevFavsArray.splice(removeIndex, 1);
+      return {
+        favsArray: prevFavsArray
+      };
+    });
+  };
+
+  render() {
     return (
       <div className="App">
         <Header
@@ -172,7 +193,7 @@ class App extends Component {
           buttonFavs={this.onButtonFavs}
           favsCount={this.state.favsArray.length}
         />
-        <Spinner loading={this.state.isLoading}/>
+        <Spinner loading={this.state.isLoading} />
         <CardList
           onFavClick={this.onFavClick}
           cardsShow={this.state.cardsShow}
@@ -181,6 +202,7 @@ class App extends Component {
         />
         <FavList
           onFavClick={this.onFavClick}
+          onButtonRemove={this.onButtonRemove}
           cardsShow={this.state.cardsShow}
           music={this.state.favsArray}
         />

@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card';
 
-const FavList = ({ cardsShow, music, onFavClick }) => {
+const FavList = ({ cardsShow, music, onFavClick, onButtonRemove }) => {
   if (!cardsShow) {
     return (
       <div>
@@ -11,12 +11,14 @@ const FavList = ({ cardsShow, music, onFavClick }) => {
             return (
               <Card
                 onFavClick={onFavClick}
+                onButtonRemove={onButtonRemove}
                 key={el.id}
                 id={el.id}
                 track={el.track}
                 album={el.album}
                 artist={el.artist}
                 favClicked={el.favClicked}
+                addedToFav={el.addedToFav}
               />
             );
           })}
