@@ -4,9 +4,9 @@ import Header from '../components/Header/Header';
 import CardList from '../components/CardList/CardList';
 import FavList from '../components/FavList/FavList';
 import Footer from '../components/Footer/Footer';
-import scrollDownSmooth from '../components/Animations/Animations';
 import Spinner from '../components/Spinner/Spinner';
 import './App.css';
+import scrollDownSmooth from '../components/Animations/Animations';
 
 class App extends Component {
   constructor(props) {
@@ -14,32 +14,32 @@ class App extends Component {
 
     this.state = {
       input: 'Justin Bieber',
-      loading: true,
+      isLoading: true,
       cardsShow: true,
       music: [
         {
           track: '',
           album: '',
           artist: '',
-          favClicked: true,
+          favClicked: false,
           id: 0,
         },
         {
           track: '',
           album: '',
           artist: '',
-          favClicked: true,
+          favClicked: false,
           id: 1,
         },
         {
           track: '',
           album: '',
           artist: '',
-          favClicked: true,
+          favClicked: false,
           id: 2,
         }
       ],
-      favsArray: []
+      favsArray: [],
     };
   }
 
@@ -53,7 +53,7 @@ class App extends Component {
       })
       .then(res => {
         if (res.message.header.available !== 0) {
-          this.setState({ loading: false })
+          this.setState({ isLoading: false })
           this.setState(prevState => {
             const onloadMusic = prevState.music;
             onloadMusic.forEach((el, i) => {
@@ -94,7 +94,7 @@ class App extends Component {
         id: this.state.music[songIndex].id,
         favClicked: !this.state.music[songIndex].favClicked,
       };
-
+      
       this.setState(prevState => {
         const toUpdate = prevState.music[songIndex].favClicked;
         const newMusic = [...prevState.music];
@@ -121,7 +121,7 @@ class App extends Component {
   };
 
   onButtonSubmit = () => {
-    this.setState({ loading: true })
+    this.setState({ isLoading: true })
     const apiKey = '22d91306931ee5a074eb08a71662cc98';
     const url = `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_artist=${
       this.state.input
@@ -136,7 +136,7 @@ class App extends Component {
           this.setState({
             cardsShow: true
           });
-          this.setState({ loading: false })
+          this.setState({ isLoading: false })
 
           this.setState(prevState => {
             const onloadMusic = prevState.music;
@@ -172,7 +172,7 @@ class App extends Component {
           buttonFavs={this.onButtonFavs}
           favsCount={this.state.favsArray.length}
         />
-        <Spinner loading={this.state.loading}/>
+        <Spinner loading={this.state.isLoading}/>
         <CardList
           onFavClick={this.onFavClick}
           cardsShow={this.state.cardsShow}

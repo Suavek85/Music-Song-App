@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card';
 
-const CardList = ({ cardsShow, music, onFavClick, input }) => {
+const CardList = ({ cardsShow, music, onFavClick, onMouseEntering, input }) => {
   if (cardsShow) {
     return (
       <div>

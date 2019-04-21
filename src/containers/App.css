@@ -11,4 +11,6 @@
   cursor: pointer;
 }
 
-
+.grow-hov:hover {
+  transform: scale(1.1);
+}
