@@ -27,7 +27,7 @@ const Card = props => {
       <div
         className="fav-wrapper grow-hov"
         style={leftStyle}
-        id={props.id}
+        data-id={props.id}
         onClick={props.onFavClick}
       >
         {props.favClicked ? <RedFavoriteFull /> : <RedFavoriteEmpty />}

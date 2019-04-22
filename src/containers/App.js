@@ -4,6 +4,7 @@ import CardList from "../components/CardList/CardList";
 import FavList from "../components/FavList/FavList";
 import Footer from "../components/Footer/Footer";
 import Spinner from "../components/Spinner/Spinner";
+import { genericUrl, specificUrl } from "../components/API/API";
 import "./App.css";
 import scrollDownSmooth from "../components/Animations/Animations";
 
@@ -46,10 +47,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const apiKey = "22d91306931ee5a074eb08a71662cc98";
-    const url = `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_artist=justin bieber&page_size=3&page=1&s_track_rating=desc & apikey=${apiKey}`;
-
-    fetch(url)
+    fetch(genericUrl)
       .then(data => {
         return data.json();
       })
@@ -75,6 +73,12 @@ class App extends Component {
             cardsShow: true
           });
         }
+      })
+
+      .catch(error => {
+        console.log("Cannot load music cards");
+        //if (error.status === 404) {
+        //}
       });
   }
 
@@ -86,7 +90,7 @@ class App extends Component {
 
   onFavClick = event => {
     if (this.state.cardsShow) {
-      const target = event.target.id;
+      const target = event.target.dataset.id;
       const songIndex = this.state.music.findIndex(
         el => el.id === parseFloat(target)
       );
@@ -98,7 +102,6 @@ class App extends Component {
         favClicked: !this.state.music[songIndex].favClicked,
         addedToFav: true
       };
-      console.log(songItem);
 
       this.setState(prevState => {
         const toUpdate = prevState.music[songIndex].favClicked;
@@ -128,12 +131,8 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ isLoading: true });
-    const apiKey = "22d91306931ee5a074eb08a71662cc98";
-    const url = `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_artist=${
-      this.state.input
-    }&page_size=3&page=1&s_track_rating=desc & apikey=${apiKey}`;
 
-    fetch(url)
+    fetch(specificUrl(this.state.input))
       .then(data => {
         return data.json();
       })
@@ -159,6 +158,11 @@ class App extends Component {
           });
           scrollDownSmooth();
         }
+      })
+      .catch(error => {
+        console.log("Cannot load music cards");
+        //if (error.status === 404) {
+        //}
       });
   };
 
