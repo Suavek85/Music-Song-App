@@ -1,15 +1,18 @@
 {
-  "main.css": "/Music-Song-App/static/css/main.41e60b99.chunk.css",
-  "main.js": "/Music-Song-App/static/js/main.a6a80ba2.chunk.js",
-  "main.js.map": "/Music-Song-App/static/js/main.a6a80ba2.chunk.js.map",
+  "main.css": "/Music-Song-App/static/css/main.17e89baf.chunk.css",
+  "main.js": "/Music-Song-App/static/js/main.b9bd5b0a.chunk.js",
+  "main.js.map": "/Music-Song-App/static/js/main.b9bd5b0a.chunk.js.map",
   "runtime~main.js": "/Music-Song-App/static/js/runtime~main.7067adf5.js",
   "runtime~main.js.map": "/Music-Song-App/static/js/runtime~main.7067adf5.js.map",
-  "static/js/2.047c6e93.chunk.js": "/Music-Song-App/static/js/2.047c6e93.chunk.js",
-  "static/js/2.047c6e93.chunk.js.map": "/Music-Song-App/static/js/2.047c6e93.chunk.js.map",
+  "static/js/2.61cb3251.chunk.js": "/Music-Song-App/static/js/2.61cb3251.chunk.js",
+  "static/js/2.61cb3251.chunk.js.map": "/Music-Song-App/static/js/2.61cb3251.chunk.js.map",
   "index.html": "/Music-Song-App/index.html",
-  "precache-manifest.db6c973533adb07b8323e4a73c3e1cba.js": "/Music-Song-App/precache-manifest.db6c973533adb07b8323e4a73c3e1cba.js",
+  "precache-manifest.e7d0b5b4ccec2998b6063da9528095c4.js": "/Music-Song-App/precache-manifest.e7d0b5b4ccec2998b6063da9528095c4.js",
   "service-worker.js": "/Music-Song-App/service-worker.js",
-  "static/css/main.41e60b99.chunk.css.map": "/Music-Song-App/static/css/main.41e60b99.chunk.css.map",
+  "static/css/main.17e89baf.chunk.css.map": "/Music-Song-App/static/css/main.17e89baf.chunk.css.map",
+  "static/media/brazil.jpg": "/Music-Song-App/static/media/brazil.2d2c23ed.jpg",
   "static/media/music-black-white-rotate.jpg": "/Music-Song-App/static/media/music-black-white-rotate.7223fc14.jpg",
-  "static/media/music-black-white.jpg": "/Music-Song-App/static/media/music-black-white.1c419989.jpg"
+  "static/media/music-black-white.jpg": "/Music-Song-App/static/media/music-black-white.1c419989.jpg",
+  "static/media/spain.jpg": "/Music-Song-App/static/media/spain.a284017c.jpg",
+  "static/media/usa.jpg": "/Music-Song-App/static/media/usa.87e4a6a5.jpg"
 }
