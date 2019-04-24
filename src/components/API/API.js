@@ -4,7 +4,3 @@ export const specificUrl = input => {
   return `https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_artist=${input}&page_size=3&page=1&s_track_rating=desc & apikey=${apiKey}`;
 };
 
-export const specificCountryUrl = () => {
-
-  return `https://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=3&country=br & apikey=${apiKey}`
-}

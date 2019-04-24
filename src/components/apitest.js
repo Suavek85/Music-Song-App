@@ -200,3 +200,331 @@
         }
     }
 }
+
+{
+    "message": {
+        "header": {
+            "status_code": 200,
+            "execute_time": 0.0090320110321045
+        },
+        "body": {
+            "track_list": [{
+                "track": {
+                    "track_id": 17640248,
+                    "track_name": "Hymn of the Big Wheel (Nellee Hooper mix)",
+                    "track_name_translation_list": [],
+                    "track_rating": 22,
+                    "commontrack_id": 123,
+                    "instrumental": 0,
+                    "explicit": 0,
+                    "has_lyrics": 1,
+                    "has_subtitles": 1,
+                    "has_richsync": 0,
+                    "num_favourite": 0,
+                    "album_id": 13806799,
+                    "album_name": "Massive Attack EP",
+                    "artist_id": 3,
+                    "artist_name": "Massive Attack",
+                    "track_share_url": "https:\/\/www.musixmatch.com\/lyrics\/Massive-Attack\/Hymn-of-the-Big-Wheel-Nellee-Hooper-mix?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "track_edit_url": "https:\/\/www.musixmatch.com\/lyrics\/Massive-Attack\/Hymn-of-the-Big-Wheel-Nellee-Hooper-mix\/edit?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "restricted": 0,
+                    "updated_time": "2019-01-31T11:13:53Z",
+                    "primary_genres": {
+                        "music_genre_list": [{
+                            "music_genre": {
+                                "music_genre_id": 7,
+                                "music_genre_parent_id": 34,
+                                "music_genre_name": "Electronic",
+                                "music_genre_name_extended": "Electronic",
+                                "music_genre_vanity": "Electronic"
+                            }
+                        }]
+                    }
+                }
+            }, {
+                "track": {
+                    "track_id": 162470278,
+                    "track_name": "Old Town Road",
+                    "track_name_translation_list": [],
+                    "track_rating": 100,
+                    "commontrack_id": 90652485,
+                    "instrumental": 0,
+                    "explicit": 0,
+                    "has_lyrics": 1,
+                    "has_subtitles": 1,
+                    "has_richsync": 1,
+                    "num_favourite": 246,
+                    "album_id": 30881734,
+                    "album_name": "Old Town Road",
+                    "artist_id": 36235669,
+                    "artist_name": "Lil Nas X",
+                    "track_share_url": "https:\/\/www.musixmatch.com\/lyrics\/Lil-Nas-X\/Old-Town-Road?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "track_edit_url": "https:\/\/www.musixmatch.com\/lyrics\/Lil-Nas-X\/Old-Town-Road\/edit?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "restricted": 0,
+                    "updated_time": "2019-03-12T15:35:50Z",
+                    "primary_genres": {
+                        "music_genre_list": [{
+                            "music_genre": {
+                                "music_genre_id": 6,
+                                "music_genre_parent_id": 34,
+                                "music_genre_name": "Country",
+                                "music_genre_name_extended": "Country",
+                                "music_genre_vanity": "Country"
+                            }
+                        }]
+                    }
+                }
+            }, {
+                "track": {
+                    "track_id": 158988975,
+                    "track_name": "Shallow",
+                    "track_name_translation_list": [],
+                    "track_rating": 100,
+                    "commontrack_id": 88392716,
+                    "instrumental": 0,
+                    "explicit": 1,
+                    "has_lyrics": 1,
+                    "has_subtitles": 1,
+                    "has_richsync": 1,
+                    "num_favourite": 3024,
+                    "album_id": 30239370,
+                    "album_name": "A Star Is Born Soundtrack",
+                    "artist_id": 36879228,
+                    "artist_name": "Lady Gaga feat. Bradley Cooper",
+                    "track_share_url": "https:\/\/www.musixmatch.com\/lyrics\/Lady-Gaga-feat-Bradley-Cooper\/Shallow?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "track_edit_url": "https:\/\/www.musixmatch.com\/lyrics\/Lady-Gaga-feat-Bradley-Cooper\/Shallow\/edit?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "restricted": 0,
+                    "updated_time": "2018-10-18T15:46:55Z",
+                    "primary_genres": {
+                        "music_genre_list": [{
+                            "music_genre": {
+                                "music_genre_id": 1042,
+                                "music_genre_parent_id": 6,
+                                "music_genre_name": "Traditional Country",
+                                "music_genre_name_extended": "Country \/ Traditional Country",
+                                "music_genre_vanity": "Country-Traditional-Country"
+                            }
+                        }, {
+                            "music_genre": {
+                                "music_genre_id": 1065,
+                                "music_genre_parent_id": 10,
+                                "music_genre_name": "Folk-Rock",
+                                "music_genre_name_extended": "Singer\/Songwriter \/ Folk-Rock",
+                                "music_genre_vanity": "Singer-Songwriter-Folk-Rock"
+                            }
+                        }, {
+                            "music_genre": {
+                                "music_genre_id": 1133,
+                                "music_genre_parent_id": 14,
+                                "music_genre_name": "Pop\/Rock",
+                                "music_genre_name_extended": "Pop \/ Pop\/Rock",
+                                "music_genre_vanity": "Pop-Pop-Rock"
+                            }
+                        }]
+                    }
+                }
+            }]
+        }
+    }
+}
+
+
+{
+    "message": {
+        "header": {
+            "status_code": 200,
+            "execute_time": 0.011358022689819
+        },
+        "body": {
+            "track_list": [{
+                "track": {
+                    "track_id": 168721095,
+                    "track_name": "FANCY",
+                    "track_name_translation_list": [{
+                        "track_name_translation": {
+                            "language": "JA",
+                            "translation": "FANCY"
+                        }
+                    }],
+                    "track_rating": 92,
+                    "commontrack_id": 94864098,
+                    "instrumental": 0,
+                    "explicit": 0,
+                    "has_lyrics": 1,
+                    "has_subtitles": 1,
+                    "has_richsync": 1,
+                    "num_favourite": 70,
+                    "album_id": 32143928,
+                    "album_name": "FANCY YOU",
+                    "artist_id": 27833021,
+                    "artist_name": "Twice",
+                    "track_share_url": "https:\/\/www.musixmatch.com\/lyrics\/Twice-6\/FANCY?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "track_edit_url": "https:\/\/www.musixmatch.com\/lyrics\/Twice-6\/FANCY\/edit?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "restricted": 0,
+                    "updated_time": "2019-04-22T13:03:37Z",
+                    "primary_genres": {
+                        "music_genre_list": [{
+                            "music_genre": {
+                                "music_genre_id": 1686,
+                                "music_genre_parent_id": 1614,
+                                "music_genre_name": "K-Pop",
+                                "music_genre_name_extended": "Pop \/ K-Pop",
+                                "music_genre_vanity": "Pop-K-Pop"
+                            }
+                        }]
+                    }
+                }
+            }, {
+                "track": {
+                    "track_id": 168484474,
+                    "track_name": "Ramayama",
+                    "track_name_translation_list": [],
+                    "track_rating": 68,
+                    "commontrack_id": 94722056,
+                    "instrumental": 0,
+                    "explicit": 0,
+                    "has_lyrics": 1,
+                    "has_subtitles": 1,
+                    "has_richsync": 1,
+                    "num_favourite": 6,
+                    "album_id": 32113381,
+                    "album_name": "Ramayama",
+                    "artist_id": 38220328,
+                    "artist_name": "Don Omar feat. Farruko",
+                    "track_share_url": "https:\/\/www.musixmatch.com\/lyrics\/Don-Omar-feat-Farruko\/Ramayama?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "track_edit_url": "https:\/\/www.musixmatch.com\/lyrics\/Don-Omar-feat-Farruko\/Ramayama\/edit?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "restricted": 0,
+                    "updated_time": "2019-04-20T06:46:02Z",
+                    "primary_genres": {
+                        "music_genre_list": []
+                    }
+                }
+            }, {
+                "track": {
+                    "track_id": 167102026,
+                    "track_name": "Rata",
+                    "track_name_translation_list": [],
+                    "track_rating": 31,
+                    "commontrack_id": 93844235,
+                    "instrumental": 0,
+                    "explicit": 1,
+                    "has_lyrics": 1,
+                    "has_subtitles": 0,
+                    "has_richsync": 0,
+                    "num_favourite": 1,
+                    "album_id": 31807707,
+                    "album_name": "N9na",
+                    "artist_id": 13900703,
+                    "artist_name": "Tech N9ne feat. Krizz Kaliko",
+                    "track_share_url": "https:\/\/www.musixmatch.com\/lyrics\/Tech-N9ne-feat-Krizz-Kaliko\/Rata?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "track_edit_url": "https:\/\/www.musixmatch.com\/lyrics\/Tech-N9ne-feat-Krizz-Kaliko\/Rata\/edit?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "restricted": 0,
+                    "updated_time": "2019-04-23T13:50:48Z",
+                    "primary_genres": {
+                        "music_genre_list": []
+                    }
+                }
+            }]
+        }
+    }
+}
+
+{
+    "message": {
+        "header": {
+            "status_code": 200,
+            "execute_time": 0.0068042278289795
+        },
+        "body": {
+            "track_list": [{
+                "track": {
+                    "track_id": 168721095,
+                    "track_name": "FANCY",
+                    "track_name_translation_list": [{
+                        "track_name_translation": {
+                            "language": "JA",
+                            "translation": "FANCY"
+                        }
+                    }],
+                    "track_rating": 92,
+                    "commontrack_id": 94864098,
+                    "instrumental": 0,
+                    "explicit": 0,
+                    "has_lyrics": 1,
+                    "has_subtitles": 1,
+                    "has_richsync": 1,
+                    "num_favourite": 70,
+                    "album_id": 32143928,
+                    "album_name": "FANCY YOU",
+                    "artist_id": 27833021,
+                    "artist_name": "Twice",
+                    "track_share_url": "https:\/\/www.musixmatch.com\/lyrics\/Twice-6\/FANCY?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "track_edit_url": "https:\/\/www.musixmatch.com\/lyrics\/Twice-6\/FANCY\/edit?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "restricted": 0,
+                    "updated_time": "2019-04-22T13:03:37Z",
+                    "primary_genres": {
+                        "music_genre_list": [{
+                            "music_genre": {
+                                "music_genre_id": 1686,
+                                "music_genre_parent_id": 1614,
+                                "music_genre_name": "K-Pop",
+                                "music_genre_name_extended": "Pop \/ K-Pop",
+                                "music_genre_vanity": "Pop-K-Pop"
+                            }
+                        }]
+                    }
+                }
+            }, {
+                "track": {
+                    "track_id": 168484474,
+                    "track_name": "Ramayama",
+                    "track_name_translation_list": [],
+                    "track_rating": 68,
+                    "commontrack_id": 94722056,
+                    "instrumental": 0,
+                    "explicit": 0,
+                    "has_lyrics": 1,
+                    "has_subtitles": 1,
+                    "has_richsync": 1,
+                    "num_favourite": 6,
+                    "album_id": 32113381,
+                    "album_name": "Ramayama",
+                    "artist_id": 38220328,
+                    "artist_name": "Don Omar feat. Farruko",
+                    "track_share_url": "https:\/\/www.musixmatch.com\/lyrics\/Don-Omar-feat-Farruko\/Ramayama?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "track_edit_url": "https:\/\/www.musixmatch.com\/lyrics\/Don-Omar-feat-Farruko\/Ramayama\/edit?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "restricted": 0,
+                    "updated_time": "2019-04-20T06:46:02Z",
+                    "primary_genres": {
+                        "music_genre_list": []
+                    }
+                }
+            }, {
+                "track": {
+                    "track_id": 167102026,
+                    "track_name": "Rata",
+                    "track_name_translation_list": [],
+                    "track_rating": 31,
+                    "commontrack_id": 93844235,
+                    "instrumental": 0,
+                    "explicit": 1,
+                    "has_lyrics": 1,
+                    "has_subtitles": 0,
+                    "has_richsync": 0,
+                    "num_favourite": 1,
+                    "album_id": 31807707,
+                    "album_name": "N9na",
+                    "artist_id": 13900703,
+                    "artist_name": "Tech N9ne feat. Krizz Kaliko",
+                    "track_share_url": "https:\/\/www.musixmatch.com\/lyrics\/Tech-N9ne-feat-Krizz-Kaliko\/Rata?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "track_edit_url": "https:\/\/www.musixmatch.com\/lyrics\/Tech-N9ne-feat-Krizz-Kaliko\/Rata\/edit?utm_source=application&utm_campaign=api&utm_medium=None%3A1409618301886",
+                    "restricted": 0,
+                    "updated_time": "2019-04-23T13:50:48Z",
+                    "primary_genres": {
+                        "music_genre_list": []
+                    }
+                }
+            }]
+        }
+    }
+}

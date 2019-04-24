@@ -4,15 +4,15 @@
 
 ## Table of Contents
 
-- General info
+- [General info](#general-info)
 
-- Features
+- [Features](#features)
 
-- Technologies
+- [Technologies](#technologies)
 
-- Setup
+- [Setup](#setup)
 
-- Status
+- [Status](#status)
 
 ## General info
 
@@ -20,7 +20,7 @@ Reactjs app allowing to find current top 3 songs of any musician or band. And to
 
 My own idea, created from scratch.
 
-Live preview [here]([https://suavek85.github.io/Music-Song-App/](https://suavek85.github.io/Music-Song-App/)).
+[Live preview](https://suavek85.github.io/Music-Song-App/).
 
 ## Features
 

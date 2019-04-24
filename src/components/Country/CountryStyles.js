@@ -6,14 +6,14 @@ export const wrapperBrazil = {
   width: "50vw",
   height: "400px",
   backgroundImage: `url(${BrazilBck})`,
-  margin: "150px auto 200px auto"
+  margin: "100px auto 50px auto"
 };
 
 export const wrapperUsa = {
   width: "50vw",
   height: "400px",
   backgroundImage: `url(${UsaBck})`,
-  margin: "50px auto 200px auto",
+  margin: "50px auto 50px auto",
 };
 
 export const wrapperEs = {
