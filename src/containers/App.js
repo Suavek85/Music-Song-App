@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import Header from "../components/Header/Header";
-import CardList from "../components/CardList/CardList";
 import FavList from "../components/FavList/FavList";
 import Footer from "../components/Footer/Footer";
 import Spinner from "../components/Spinner/Spinner";
 import { genericUrl, specificUrl } from "../components/API/API";
+import CardList from "../components/CardList/CardList";
 import "./App.css";
 import scrollDownSmooth from "../components/Animations/Animations";
+import Country from "../components/Country/Country";
 
 class App extends Component {
   constructor(props) {
@@ -210,6 +211,7 @@ class App extends Component {
           cardsShow={this.state.cardsShow}
           music={this.state.favsArray}
         />
+        <Country />
         <Footer />
       </div>
     );

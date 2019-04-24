@@ -1,31 +1,63 @@
-Song Finder - Music App - in React:
+# Music Song App
 
-- preview: https://suavek85.github.io/Music-Song-App/ ,
+> Reactjs app for finding songs and adding them to your Favorites.
 
-- in progress,
+## Table of Contents
 
-- own idea.
+- General info
 
-Features:
+- Features
 
-- find current Top 3 song of any artist,
+- Technologies
 
-- mark and save your songs as Favorites,
+- Setup
 
-- open your Favorite songs (Favorite tab in the top nav),
+- Status
 
-- remove you Favorite songs (Favorite tab in the top nav).
+## General info
 
-Built using: 
+Reactjs app allowing to find current top 3 songs of any musician or band. And to add or remove them from the Favorites section. It also shows Brazil's, USA and UK Top 3 chart and allows to add those songs to Favorites section as well.
 
-- React.js,
+My own idea, created from scratch.
 
-- Tachyons CSS toolkit, 
+Live preview [here]([https://suavek85.github.io/Music-Song-App/](https://suavek85.github.io/Music-Song-App/)).
+
+## Features
+
+- finding current top 3 songs of any musician or band
+
+- displays top 3 songs in selected countries
+
+- saving any of the above songs in the Favorite section
+
+- includes badge displaying number of songs in the Favorite section
+
+- removing songs from the Favorite section
+
+## Setup
+
+To run this project, install it locally using npm:
+
+1. cd ../music-song-app
+
+2. npm install
+
+3. npm start
+
+## Technologies
 
 - Musixmatch API,
+
+- Tachyons Css Toolkit,
 
 - Styled Icons,
 
 - React Epic Spinners,
 
-- Eslint-Airbnb.
+- React Reveal,
+
+- ES Lint Airbnb styling.
+
+## Status
+
+The project is currently in progress.
