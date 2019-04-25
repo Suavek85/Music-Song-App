@@ -18,7 +18,7 @@
 
 Reactjs app allowing to find current top 3 songs of any musician or band. And to add or remove them from the Favorites section. It also shows Brazil's, USA and UK Top 3 chart and allows to add those songs to Favorites section as well.
 
-My own idea, created from scratch.
+My own idea![🤓](https://mail.google.com/mail/e/1f913), created from scratch.[🔨](https://mail.google.com/mail/e/1f528)
 
 [Live preview](https://suavek85.github.io/Music-Song-App/).
 
