@@ -200,7 +200,7 @@ class App extends Component {
         />
         <Spinner loading={this.state.isLoading} />
         <CardList
-          onFavClick={this.onFavClick}
+          git 
           cardsShow={this.state.cardsShow}
           music={this.state.music}
           input={this.state.input}

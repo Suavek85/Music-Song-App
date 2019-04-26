@@ -1,5 +1,13 @@
+.clip {
+
+
+    
+}
+
 .clip-brazil {
     font-size: 60px;
+    padding-top: 30px;
+    margin-bottom: 40px;
     background-clip: text;
     background: -webkit-linear-gradient(#D3D3D3, grey);
     -webkit-background-clip: text;
@@ -13,6 +21,8 @@
 
 .clip-usa {
     font-size: 60px;
+    padding-top: 30px;
+    margin-bottom: 40px;
     background-clip: text;
     background: -webkit-linear-gradient(#D3D3D3, grey);
     -webkit-background-clip: text;
@@ -26,6 +36,8 @@
 
 .clip-es {
     font-size: 60px;
+    padding-top: 30px;
+    margin-bottom: 40px;
     background-clip: text;
     background: -webkit-linear-gradient(#D3D3D3, grey);
     -webkit-background-clip: text;

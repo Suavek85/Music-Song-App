@@ -1,7 +1,7 @@
 import React from "react";
 import CountryItem from "../CountryItem/CountryItem";
 
-const CountryList = ({ countries }) => {
+const CountryList = ({ countries, onFavClick }) => {
   return (
     <div>
       <h1 className="f1 lh-title gray">
@@ -18,6 +18,7 @@ const CountryList = ({ countries }) => {
             fadeTop={el.fadeTop}
             fadeRight={el.fadeRight}
             fadeLeft={el.fadeLeft}
+            onFavClick={onFavClick}
           />
         );
       })}
