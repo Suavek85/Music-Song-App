@@ -8,6 +8,7 @@ import CardList from "../components/CardList/CardList";
 import "./App.css";
 import scrollDownSmooth from "../components/Animations/Animations";
 import Country from "../components/Country/Country";
+import { musicState } from "./AppMusicState";
 
 class App extends Component {
   constructor(props) {
@@ -17,32 +18,7 @@ class App extends Component {
       input: "Justin Bieber",
       isLoading: true,
       cardsShow: true,
-      music: [
-        {
-          track: "",
-          album: "",
-          artist: "",
-          favClicked: false,
-          addedToFav: false,
-          id: 0
-        },
-        {
-          track: "",
-          album: "",
-          artist: "",
-          favClicked: false,
-          addedToFav: false,
-          id: 1
-        },
-        {
-          track: "",
-          album: "",
-          artist: "",
-          favClicked: false,
-          addedToFav: false,
-          id: 2
-        }
-      ],
+      music: musicState,
       favsArray: []
     };
   }
@@ -200,7 +176,7 @@ class App extends Component {
         />
         <Spinner loading={this.state.isLoading} />
         <CardList
-          git 
+          onFavClick={this.onFavClick}
           cardsShow={this.state.cardsShow}
           music={this.state.music}
           input={this.state.input}
@@ -211,7 +187,7 @@ class App extends Component {
           cardsShow={this.state.cardsShow}
           music={this.state.favsArray}
         />
-        <Country />
+        <Country  />
         <Footer />
       </div>
     );
