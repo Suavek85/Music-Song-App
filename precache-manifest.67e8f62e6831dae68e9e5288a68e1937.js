@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/Music-Song-App/static/media/brazil.2d2c23ed.jpg"
   },
   {
-    "revision": "484ce5ed33dc3e543e43",
+    "revision": "fc50ad59469837bed90b",
     "url": "/Music-Song-App/static/css/main.50fe7e81.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/Music-Song-App/static/media/music-black-white.1c419989.jpg"
   },
   {
-    "revision": "484ce5ed33dc3e543e43",
-    "url": "/Music-Song-App/static/js/main.a199a927.chunk.js"
+    "revision": "fc50ad59469837bed90b",
+    "url": "/Music-Song-App/static/js/main.24ea96d9.chunk.js"
   },
   {
     "revision": "87e4a6a5322131eb472276b69be0093a",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/Music-Song-App/static/media/music-black-white-rotate.7223fc14.jpg"
   },
   {
-    "revision": "2870329352c361354c641c75eb037046",
+    "revision": "9d6023cd1a73d6f1a3331464a14dcb36",
     "url": "/Music-Song-App/index.html"
   }
 ];
