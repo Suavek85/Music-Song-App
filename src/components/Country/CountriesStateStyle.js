@@ -4,7 +4,7 @@ import EsBck from "./images/spain.jpg";
 import GenBck from "./images/generic.jpg";
 
 const wrapperBrazil = {
-  width: "50vw",
+  width: "60vw",
   height: "350px",
   backgroundImage: `url(${BrazilBck})`,
   backgroundAttachment: 'fixed',
@@ -12,7 +12,7 @@ const wrapperBrazil = {
 };
 
 const wrapperUsa = {
-  width: "50vw",
+  width: "60vw",
   height: "350px",
   backgroundImage: `url(${UsaBck})`,
   backgroundAttachment: 'fixed',
@@ -20,7 +20,7 @@ const wrapperUsa = {
 };
 
 const wrapperEs = {
-  width: "50vw",
+  width: "60vw",
   height: "350px",
   backgroundImage: `url(${EsBck})`,
   backgroundAttachment: 'fixed',
@@ -28,7 +28,7 @@ const wrapperEs = {
 };
 
 const wrapperRandom = {
-  width: "50vw",
+  width: "60vw",
   height: "400px",
   backgroundImage: `url(${GenBck})`,
   backgroundAttachment: 'fixed',

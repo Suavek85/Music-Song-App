@@ -16,7 +16,7 @@ const CountryItem = props => {
             {props.button ? (
               <div>
                 <div><input style={props.textStyle} onChange={props.searchChange} placeholder='Try your country...' required /></div>
-                <p onClick={props.buttonClick} className="f6 link dim ba bw1 ph3 pv2 mb2 dib hot-pink pointer tracked ttc " >Go!</p>
+                <p onClick={props.buttonClick} className="f6 link dim ba bw1 ph4 pv2 mb2 dib hot-pink pointer tracked ttc " >Go!</p>
               </div>
             ) : (
               props.name

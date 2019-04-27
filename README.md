@@ -36,7 +36,7 @@ My own idea![🤓](https://mail.google.com/mail/e/1f913), created from scratch.[
 
 - showing top 3 singles chart for Brazil, USA, Spain
 
-- finding top 2 singles chart for any country
+- finding top 3 singles chart for any country
 
 
 ## Setup
