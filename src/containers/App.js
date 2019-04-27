@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import Header from "../components/Header/Header";
-import FavList from "../components/FavList/FavList";
-import Footer from "../components/Footer/Footer";
-import Spinner from "../components/Spinner/Spinner";
-import { genericUrl, specificUrl } from "../components/API/API";
 import CardList from "../components/CardList/CardList";
-import "./App.css";
-import scrollDownSmooth from "../components/Animations/Animations";
+import FavList from "../components/CardList/FavList";
 import Country from "../components/Country/Country";
+import Footer from "../components/Footer/Footer";
+import { genericUrl, specificUrl } from "../components/API/API";
 import { musicState } from "./AppMusicState";
+import Spinner from "../components/Animations/Spinner/Spinner";
+import scrollDownSmooth from "../components/Animations/Animations";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -144,6 +144,9 @@ class App extends Component {
   };
 
   onButtonFavs = () => {
+    if (this.state.favsArray.length === 0) {
+      return;
+    }
     this.setState({
       cardsShow: false
     });
@@ -187,7 +190,7 @@ class App extends Component {
           cardsShow={this.state.cardsShow}
           music={this.state.favsArray}
         />
-        <Country  />
+        <Country />
         <Footer />
       </div>
     );

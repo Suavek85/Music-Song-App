@@ -1,30 +1,29 @@
 import React from "react";
-import CountryItem from "../CountryItem/CountryItem";
+import CountryItem from "./CountryItem";
 
-const CountriesList = ({ countries }) => {
+const CountryList= ({ countryBottom, searchChange, buttonClick }) => {
   return (
     <div>
-      <h1 className="f1 lh-title gray">
-                Top Songs in...
-        </h1>
-      {countries.map(el => {
+        {countryBottom.map(el => {
         return (
           <CountryItem
             wrapperStyle={el.wrapperStyle}
+            textStyle={el.textStyle}
             circleStyle={el.circleStyle}
-            nameClass={el.nameClass}
             key={el.id}
             name={el.name}
             topSongs={el.topSongs}
             fadeTop={el.fadeTop}
             fadeRight={el.fadeRight}
             fadeLeft={el.fadeLeft}
+            button={el.button}
+            searchChange={searchChange}
+            buttonClick={buttonClick}
           />
         );
-      })}
+    })}
     </div>
   );
 };
 
-export default CountriesList;
-
+export default CountryList;

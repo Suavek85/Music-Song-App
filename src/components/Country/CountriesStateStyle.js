@@ -1,11 +1,13 @@
 import BrazilBck from "./images/brazil.jpg";
 import UsaBck from "./images/usa.jpg";
 import EsBck from "./images/spain.jpg";
+import GenBck from "./images/generic.jpg";
 
 const wrapperBrazil = {
   width: "50vw",
   height: "350px",
   backgroundImage: `url(${BrazilBck})`,
+  backgroundAttachment: 'fixed',
   margin: "100px auto 50px auto"
 };
 
@@ -13,6 +15,7 @@ const wrapperUsa = {
   width: "50vw",
   height: "350px",
   backgroundImage: `url(${UsaBck})`,
+  backgroundAttachment: 'fixed',
   margin: "50px auto 50px auto"
 };
 
@@ -20,79 +23,75 @@ const wrapperEs = {
   width: "50vw",
   height: "350px",
   backgroundImage: `url(${EsBck})`,
+  backgroundAttachment: 'fixed',
   margin: "50px auto 80px auto"
 };
 
 const wrapperRandom = {
   width: "50vw",
   height: "400px",
-  backgroundImage: `url(${EsBck})`,
+  backgroundImage: `url(${GenBck})`,
+  backgroundAttachment: 'fixed',
   margin: "50px auto 80px auto"
 };
 
-
 const textBr = {
-  fontSize: '60px',
-  paddingTop: '30px',
-  marginBottom: '40px',
-  color: 'grey',
+  fontSize: "60px",
+  paddingTop: "30px",
+  marginBottom: "40px",
+  color: "pink",
   fontFamily: "'Montserrat', sans-serif",
-  fontWeight: '900',
-  lineHeight: '1, 5',
-  letterSpacing: '5px',
- 
-}
+  fontWeight: "900",
+  lineHeight: "1, 5",
+  letterSpacing: "5px"
+};
 
 const textUsa = {
-  fontSize: '60px',
-  paddingTop: '30px',
-  marginBottom: '40px',
-  color: 'grey',
+  fontSize: "60px",
+  paddingTop: "30px",
+  marginBottom: "40px",
+  color: "pink",
   fontFamily: "'Montserrat', sans-serif",
-  fontWeight: '900',
-  lineHeight: '1, 5',
-  letterSpacing: '7px',
- 
-}
+  fontWeight: "900",
+  lineHeight: "1, 5",
+  letterSpacing: "7px"
+};
 
 const textEs = {
-  fontSize: '60px',
-  paddingTop: '30px',
-  marginBottom: '40px',
-  color: 'grey',
+  fontSize: "60px",
+  paddingTop: "30px",
+  marginBottom: "40px",
+  color: "pink",
   fontFamily: "'Montserrat', sans-serif",
-  fontWeight: '900',
-  lineHeight: '1, 5',
-  letterSpacing: '5px',
- 
-}
+  fontWeight: "900",
+  lineHeight: "1, 5",
+  letterSpacing: "5px"
+};
 
 const textXx = {
-  backgroundColor: 'transparent',
-  color: 'grey',
-  border: 'none',
-  width: '90%',
-  textAlign: 'center',
-  outline: 'none',
+  backgroundColor: "transparent",
+  color: "pink",
+  border: "none",
+  width: "90%",
+  textAlign: "center",
+  outline: "none",
   fontFamily: "'Montserrat', sans-serif",
-  fontWeight: '900',
-  fontSize: '50px',
-  paddingTop: '20px',
-  
-}
-
+  fontWeight: "900",
+  fontSize: "60px",
+  paddingTop: "20px",
+  margin: 'auto',
+};
 
 const numberCircle = {
-  paddingTop: '5px',
-  paddingBottom: '5px',
-  paddingLeft: '13px',
-  paddingRight: '13px',
-  color: 'white',
-  fontSize: '18px',
-  borderRadius: '50%',
-  border: '1px solid white',
-
-}
+  paddingTop: "5px",
+  paddingBottom: "5px",
+  paddingLeft: "13px",
+  paddingRight: "13px",
+  color: "white",
+  fontSize: "18px",
+  borderRadius: "50%",
+  border: "1px solid white"
+};
 
 export const countriesMain = [
   {
@@ -123,7 +122,7 @@ export const countriesMain = [
       }
     ],
     wrapperStyle: wrapperBrazil,
-    nameClass: textBr,
+    textStyle: textBr,
     circleStyle: numberCircle,
     fadeTop: false,
     fadeRight: false,
@@ -158,7 +157,7 @@ export const countriesMain = [
       }
     ],
     wrapperStyle: wrapperUsa,
-    nameClass: textUsa,
+    textStyle: textUsa,
     circleStyle: numberCircle,
     fadeTop: false,
     fadeRight: true,
@@ -193,7 +192,7 @@ export const countriesMain = [
       }
     ],
     wrapperStyle: wrapperEs,
-    nameClass: textEs,
+    textStyle: textEs,
     circleStyle: numberCircle,
     fadeTop: false,
     fadeRight: false,
@@ -231,7 +230,7 @@ export const countrySelected = [
       }
     ],
     wrapperStyle: wrapperRandom,
-    nameClass: textXx,
+    textStyle: textXx,
     circleStyle: numberCircle,
     fadeTop: false,
     fadeRight: true,

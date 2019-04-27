@@ -1,10 +1,10 @@
 import React from "react";
-import Logo from "../Logo/Logo";
-import RedFavoriteEmpty from "../FavoriteIcon/FavoriteIcon";
-import RedFavoriteFull from "../FavoriteIconFull/FavoriteIconFull";
-import GreyBin from "../BinIcon/BinIcon";
+import Logo from "../Icons/Logo/Logo";
+import RedFavoriteEmpty from "../Icons/FavoriteIcon/FavoriteIcon";
+import RedFavoriteFull from "../Icons/FavoriteIconFull/FavoriteIconFull";
+import GreyBin from "../Icons/BinIcon/BinIcon";
 
-const Card = props => {
+const CardItem = props => {
   const leftStyle = {
     height: "32px",
     width: "32px",
@@ -53,4 +53,4 @@ const Card = props => {
   );
 };
 
-export default Card;
+export default CardItem;

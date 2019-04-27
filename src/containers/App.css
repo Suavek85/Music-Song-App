@@ -14,3 +14,7 @@
 .grow-hov:hover {
   transform: scale(1.1);
 }
+
+.header-height {
+  height: 90vh;
+}

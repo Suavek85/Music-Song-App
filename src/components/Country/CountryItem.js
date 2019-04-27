@@ -11,12 +11,12 @@ const CountryItem = props => {
     >
       <div className="cover bg-left bg-center-l" style={props.wrapperStyle}>
         <div className="bg-black-80 pb5 pb6-m pb7-l h-inherit">
-          <div style={props.nameClass}>
+          <div style={props.textStyle}>
 
             {props.button ? (
               <div>
-                <div><input style={props.nameClass} onChange={props.searchChange} placeholder='Type in your country...' required autoFocus /></div>
-                <p onClick={props.buttonClick} className="f6 link dim br3 ph3 pv2 mb2 dib white bg-dark-pink pointer tracked ttc " >Go!</p>
+                <div><input style={props.textStyle} onChange={props.searchChange} placeholder='Try your country...' required /></div>
+                <p onClick={props.buttonClick} className="f6 link dim ba bw1 ph3 pv2 mb2 dib hot-pink pointer tracked ttc " >Go!</p>
               </div>
             ) : (
               props.name

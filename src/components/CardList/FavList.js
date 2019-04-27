@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../Card/Card';
+import CardItem from './CardItem';
 
 const FavList = ({ cardsShow, music, onFavClick, onButtonRemove }) => {
   if (!cardsShow) {
@@ -9,7 +9,7 @@ const FavList = ({ cardsShow, music, onFavClick, onButtonRemove }) => {
         <div className="flex flex-wrap relative justify-center">
           {music.map((el) => {
             return (
-              <Card
+              <CardItem
                 onFavClick={onFavClick}
                 onButtonRemove={onButtonRemove}
                 key={el.id}

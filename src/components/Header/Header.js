@@ -1,9 +1,9 @@
 import React from 'react';
 import './Header.css';
 import Background from './images/music-black-white.jpg';
-import PinkMusicIcon from '../Logo/Logo';
-import Search from '../Search/Search';
-import FavBadge from '../FavBadge/FavBadge'
+import PinkMusicIcon from '../Icons/Logo/Logo';
+import Search from './Search/Search';
+import FavBadge from './FavBadge'
 
 const Header = ({ buttonSubmit, buttonFavs, searchChange, favsCount }) => {
   const backImageStyle = {
@@ -11,9 +11,9 @@ const Header = ({ buttonSubmit, buttonFavs, searchChange, favsCount }) => {
   };
 
   return (
-    <header className="sans-serif">
-      <div className="cover bg-left bg-center-l" style={backImageStyle}>
-        <div className="bg-black-80 pb5 pb6-m pb7-l">
+    <header className="sans-serif  ">
+      <div className="cover bg-left bg-center-l " style={backImageStyle}>
+        <div className="bg-black-80 pb5 pb6-m pb7-l ">
           <nav className="dt w-100 mw8 center">
             <div className="dtc w2 v-mid pa3">
               <a href="/" className="dib w3 h3 pa1 grow-large ">
@@ -25,20 +25,14 @@ const Header = ({ buttonSubmit, buttonFavs, searchChange, favsCount }) => {
                 onClick={buttonFavs}
                 className="relative f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3 pointer"
               >
-                Favorites
+                Favorite songs
                 <FavBadge favsCount={favsCount} />
               </div>
               <a
-                className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3"
-                href="/"
+                className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3 pointer"
+                href="#charts"
               >
-                Songs
-              </a>
-              <a
-                className="f6 fw4 hover-white no-underline white-70 dn dib-l pv2 ph3"
-                href="/"
-              >
-                About
+                Charts
               </a>
               <a
                 className="f6 fw4 hover-white no-underline white-70 dib ml2 pv2 ph3 ba"

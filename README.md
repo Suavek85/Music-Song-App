@@ -34,6 +34,11 @@ My own idea![🤓](https://mail.google.com/mail/e/1f913), created from scratch.[
 
 - removing songs from the Favorite section
 
+- showing top 3 singles chart for Brazil, USA, Spain
+
+- finding top 2 singles chart for any country
+
+
 ## Setup
 
 To run this project, install it locally using npm:
