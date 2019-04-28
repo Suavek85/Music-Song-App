@@ -17,64 +17,32 @@ class Country extends Component {
   }
 
   componentDidMount() {
-    fetch(specificCountryUrl("br"))
-      .then(data => {
-        return data.json();
-      })
-      .then(res => {
-        this.setState(prevState => {
-          const newCountries = prevState.countries;
-          newCountries[0].topSongs.forEach((el, i) => {
-            el.track = res.message.body.track_list[i].track.track_name;
-            el.album = res.message.body.track_list[i].track.album_name;
-            el.artist = res.message.body.track_list[i].track.artist_name;
-            el.id = res.message.body.track_list[i].track.track_id;
+    const urlArray = [
+      specificCountryUrl("br"),
+      specificCountryUrl("us"),
+      specificCountryUrl("es")
+    ];
+
+    urlArray.forEach((el, i) => {
+      fetch(el)
+        .then(data => {
+          return data.json();
+        })
+        .then(res => {
+          this.setState(prevState => {
+            const newCountries = prevState.countries;
+            newCountries[i].topSongs.forEach((el, i) => {
+              el.track = res.message.body.track_list[i].track.track_name;
+              el.album = res.message.body.track_list[i].track.album_name;
+              el.artist = res.message.body.track_list[i].track.artist_name;
+              el.id = res.message.body.track_list[i].track.track_id;
+            });
+            return {
+              countries: newCountries
+            };
           });
-
-          return {
-            countries: newCountries
-          };
         });
-      });
-
-    fetch(specificCountryUrl("us"))
-      .then(data => {
-        return data.json();
-      })
-      .then(res => {
-        this.setState(prevState => {
-          const newCountries = prevState.countries;
-          newCountries[1].topSongs.forEach((el, i) => {
-            el.track = res.message.body.track_list[i].track.track_name;
-            el.album = res.message.body.track_list[i].track.album_name;
-            el.artist = res.message.body.track_list[i].track.artist_name;
-            el.id = res.message.body.track_list[i].track.track_id;
-          });
-
-          return {
-            countries: newCountries
-          };
-        });
-      });
-
-    fetch(specificCountryUrl("es"))
-      .then(data => {
-        return data.json();
-      })
-      .then(res => {
-        this.setState(prevState => {
-          const newCountries = prevState.countries;
-          newCountries[2].topSongs.forEach((el, i) => {
-            el.track = res.message.body.track_list[i].track.track_name;
-            el.album = res.message.body.track_list[i].track.album_name;
-            el.artist = res.message.body.track_list[i].track.artist_name;
-            el.id = res.message.body.track_list[i].track.track_id;
-          });
-          return {
-            countries: newCountries
-          };
-        });
-      });
+    });
   }
 
   onSearchChange = event => {
