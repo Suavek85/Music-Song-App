@@ -28,15 +28,15 @@ My own idea![🤓](https://mail.google.com/mail/e/1f913), created from scratch.[
 
 - displays top 3 songs in selected countries
 
-- saving any of the above songs in the Favorite section
+- showing top 3 singles chart for Brazil, USA, Spain
+
+- finding top 3 singles chart for any country
+
+- saving any of the above songs in the Favorite section (in progress)
 
 - includes badge displaying number of songs in the Favorite section
 
 - removing songs from the Favorite section
-
-- showing top 3 singles chart for Brazil, USA, Spain
-
-- finding top 3 singles chart for any country
 
 
 ## Setup

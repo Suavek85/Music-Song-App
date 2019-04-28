@@ -104,6 +104,7 @@ export const countriesMain = [
         track: "Shallow",
         album: "A Star Is Born Soundtrack",
         id: 158988975,
+        number: 11,
         favClicked: false
       },
       {
@@ -111,6 +112,7 @@ export const countriesMain = [
         track: "Meu Abrigo",
         album: "Melim",
         id: 142894014,
+        number: 12,
         favClicked: false
       },
       {
@@ -118,6 +120,7 @@ export const countriesMain = [
         track: "Always Remember Us This Way",
         album: "A Star Is Born Soundtrack",
         id: 158988985,
+        number: 13,
         favClicked: false
       }
     ],
@@ -139,6 +142,7 @@ export const countriesMain = [
         track: "Old Town Road (Remix)",
         album: "Old Town Road (Remix)",
         id: 17640248,
+        number: 21,
         favClicked: false
       },
       {
@@ -146,6 +150,7 @@ export const countriesMain = [
         track: "God's Country",
         album: "God's Country",
         id: 167306431,
+        number: 22,
         favClicked: false
       },
       {
@@ -153,6 +158,7 @@ export const countriesMain = [
         track: "Jenny of Oldstones (Game of Thrones)",
         album: "Jenny of Oldstones (Game of Thrones)",
         id: 168716837,
+        number: 23,
         favClicked: false
       }
     ],
@@ -174,6 +180,7 @@ export const countriesMain = [
         track: "Date La Vuelta",
         album: "Date La Vuelta",
         id: 168814808,
+        number: 31,
         favClicked: false
       },
       {
@@ -181,6 +188,7 @@ export const countriesMain = [
         track: "Con Altura",
         album: "Con Altura",
         id: 167497251,
+        number: 32,
         favClicked: false
       },
       {
@@ -188,6 +196,7 @@ export const countriesMain = [
         track: "Mi Persona Favorita",
         album: "#ELDISCO",
         id: 167332228,
+        number: 33,
         favClicked: false
       }
     ],

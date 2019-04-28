@@ -5,7 +5,7 @@ import PinkMusicIcon from '../Icons/Logo/Logo';
 import Search from './Search/Search';
 import FavBadge from './FavBadge'
 
-const Header = ({ buttonSubmit, buttonFavs, searchChange, favsCount }) => {
+const Header = ({ headerSearch, showFavs, searchChange, countFavs }) => {
   const backImageStyle = {
     backgroundImage: `url(${ Background })`,
   };
@@ -22,11 +22,11 @@ const Header = ({ buttonSubmit, buttonFavs, searchChange, favsCount }) => {
             </div>
             <div className="dtc v-mid tr pa3">
               <div
-                onClick={buttonFavs}
+                onClick={showFavs}
                 className="relative f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3 pointer"
               >
                 Favorite songs
-                <FavBadge favsCount={favsCount} />
+                <FavBadge countFavs={countFavs} />
               </div>
               <a
                 className="f6 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3 pointer"
@@ -47,7 +47,7 @@ const Header = ({ buttonSubmit, buttonFavs, searchChange, favsCount }) => {
             <h2 className="fw1 f3 white-80 mt3 mb4">
               Find top 3 tracks of your artist:
             </h2>
-            <Search searchChange={searchChange} buttonSubmit={buttonSubmit} />
+            <Search searchChange={searchChange} headerSearch={headerSearch} />
           </div>
         </div>
       </div>

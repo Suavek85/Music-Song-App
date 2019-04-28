@@ -25,7 +25,7 @@ const FavBadge = ( props ) => {
       className="tc br-100 db absolute pa1 br-100 ba"
     >
       <span className="f8" style={numbStyle}>
-        {props.favsCount}
+        {props.countFavs}
       </span>
     </div>
   );

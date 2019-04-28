@@ -1,7 +1,7 @@
 import React from "react";
 import CountryItem from "./CountryItem";
 
-const CountriesList = ({ countries }) => {
+const CountriesList = ({ countries, onCountryFavClick }) => {
   return (
     <div>
       <h1 id='charts' className="f1 lh-title gray">
@@ -14,11 +14,13 @@ const CountriesList = ({ countries }) => {
             circleStyle={el.circleStyle}
             textStyle={el.textStyle}
             key={el.id}
+            number={el.number}
             name={el.name}
             topSongs={el.topSongs}
             fadeTop={el.fadeTop}
             fadeRight={el.fadeRight}
             fadeLeft={el.fadeLeft}
+            onCountryFavClick={onCountryFavClick}
           />
         );
       })}

@@ -21,7 +21,6 @@ const CardItem = props => {
     right: "10px"
   };
   
-
   return (
     <article className=" mw5 center relative bg-white br3 pa3 pa4-ns mv5 ba b--black-10">
       <div
@@ -32,7 +31,7 @@ const CardItem = props => {
       >
         {props.favClicked ? <RedFavoriteFull /> : <RedFavoriteEmpty />}
       </div>
-      <div onClick={props.onButtonRemove} data-id={props.id} className="fav-wrapper grow-hov" style={rightStyle}>
+      <div onClick={props.removeFavs} data-id={props.id} className="fav-wrapper grow-hov" style={rightStyle}>
         {props.addedToFav ? <GreyBin /> : null }
       </div>
       <div className="tc">
