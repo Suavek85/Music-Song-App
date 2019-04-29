@@ -1,7 +1,7 @@
 import React from "react";
 import CountryItem from "./CountryItem";
 
-const CountryList= ({ countryBottom, searchChange, buttonClick }) => {
+const CountryList= ({ countryBottom, searchChange, buttonClick, onCountryFavClick }) => {
   return (
     <div>
         {countryBottom.map(el => {
@@ -12,13 +12,16 @@ const CountryList= ({ countryBottom, searchChange, buttonClick }) => {
             circleStyle={el.circleStyle}
             key={el.id}
             name={el.name}
+            number={el.number}
             topSongs={el.topSongs}
             fadeTop={el.fadeTop}
             fadeRight={el.fadeRight}
             fadeLeft={el.fadeLeft}
             button={el.button}
+            showSongs={el.showSongs}
             searchChange={searchChange}
             buttonClick={buttonClick}
+            onCountryFavClick={onCountryFavClick}
           />
         );
     })}

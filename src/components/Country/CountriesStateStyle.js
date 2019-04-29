@@ -130,7 +130,8 @@ export const countriesMain = [
     fadeTop: false,
     fadeRight: false,
     fadeLeft: true,
-    button: false
+    button: false,
+    showSongs: true,
   },
   {
     name: "USA",
@@ -168,7 +169,8 @@ export const countriesMain = [
     fadeTop: false,
     fadeRight: true,
     fadeLeft: false,
-    button: false
+    button: false,
+    showSongs: true
   },
   {
     name: "Spain",
@@ -206,7 +208,8 @@ export const countriesMain = [
     fadeTop: false,
     fadeRight: false,
     fadeLeft: true,
-    button: false
+    button: false,
+    showSongs: true
   }
 ];
 
@@ -221,6 +224,7 @@ export const countrySelected = [
         track: "Track",
         album: "Album",
         id: 0,
+        number: 41,
         favClicked: false
       },
       {
@@ -228,6 +232,7 @@ export const countrySelected = [
         track: "Track",
         album: "Album",
         id: 0,
+        number: 42,
         favClicked: false
       },
       {
@@ -235,6 +240,7 @@ export const countrySelected = [
         track: "Track",
         album: "Album",
         id: 0,
+        number: 43,
         favClicked: false
       }
     ],
@@ -244,6 +250,7 @@ export const countrySelected = [
     fadeTop: false,
     fadeRight: true,
     fadeLeft: false,
-    button: true
+    button: true,
+    showSongs: false
   }
 ];

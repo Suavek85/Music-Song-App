@@ -2,7 +2,7 @@ import React from "react";
 import CountriesList from "./CountriesList";
 import CountryList from "./CountryList";
 
-const Country = ({ countries, buttonClick, searchChange, countryBottom, onCountryFavClick }) => {
+const Country = ({ countries, buttonClick, searchChange, countryBottom, onCountryFavClick, onSelectedCountryFavClick }) => {
   return (
     <div>
       <CountriesList countries={countries} onCountryFavClick={onCountryFavClick} />
@@ -10,7 +10,7 @@ const Country = ({ countries, buttonClick, searchChange, countryBottom, onCountr
         buttonClick={buttonClick}
         searchChange={searchChange}
         countryBottom={countryBottom}
-        
+        onCountryFavClick={onSelectedCountryFavClick}
       />
     </div>
   );

@@ -99,6 +99,7 @@ class App extends Component {
   };
 
   onCardFavClick = event => {
+    //defining selected song
     if (this.state.cardsShow) {
       const target = event.target.dataset.id;
       const songIndex = this.state.music.findIndex(
@@ -112,6 +113,8 @@ class App extends Component {
         favClicked: !this.state.music[songIndex].favClicked,
         addedToFav: true
       };
+
+      //toggling fav icon - empty/full heart
       this.setState(prevState => {
         const toUpdate = prevState.music[songIndex].favClicked;
         const newMusic = [...prevState.music];
@@ -120,6 +123,8 @@ class App extends Component {
           music: newMusic
         };
       });
+
+      //conditionally pushing defined song to Favs
       this.setState(prevState => {
         const prevFavsArray = [...prevState.favsArray];
         const alreadyFav = prevFavsArray.find(
@@ -168,8 +173,6 @@ class App extends Component {
       })
       .catch(error => {
         console.log("Cannot load music cards");
-        //if (error.status === 404) {
-        //}
       });
   };
 
@@ -204,6 +207,7 @@ class App extends Component {
   };
 
   onCountryButtonClick = () => {
+    //converting country name to country code
     const countryIndex = countryCodeArr.findIndex(el => {
       return el.name === this.state.inputCountry;
     });
@@ -212,6 +216,7 @@ class App extends Component {
     }
     const countryCode = countryCodeArr[countryIndex].code;
 
+    //fetching url with country code
     fetch(specificCountryUrl(countryCode))
       .then(data => {
         return data.json();
@@ -220,6 +225,7 @@ class App extends Component {
         if (res.message.body.track_list) {
           this.setState(prevState => {
             const newCountryBottom = prevState.countryBottom;
+            newCountryBottom[0].showSongs = true;
             newCountryBottom[0].topSongs.forEach((el, i) => {
               el.track = res.message.body.track_list[i].track.track_name;
               el.album = res.message.body.track_list[i].track.album_name;
@@ -239,6 +245,7 @@ class App extends Component {
   };
 
   onCountryFavClick = event => {
+    //defining selected song
     const target = event.target.dataset.id;
     const number = event.target.dataset.no;
 
@@ -262,8 +269,71 @@ class App extends Component {
       addedToFav: true
     };
 
+    //toggling fav icons empty/full heart
     this.setState(prevState => {
       const country = prevState.countries;
+      [0, 1, 2].forEach(element => {
+        country[element].topSongs.forEach(el => {
+          if (
+            el.id === parseFloat(target) &&
+            el.number === parseFloat(number)
+          ) {
+            el.favClicked = !el.favClicked;
+          } else {
+            return;
+          }
+        });
+      });
+      return {
+        countries: country
+      };
+    });
+    //conditionally pushing defined song to Favs
+    this.setState(prevState => {
+      const prevFavArray = prevState.favsArray;
+      const alreadyFav = prevFavArray.find(
+        el => el.id === parseFloat(songItem.id)
+      );
+      if (alreadyFav === undefined) {
+        prevFavArray.push(songItem);
+        return {
+          favsArray: prevFavArray
+        };
+      }
+      return null;
+    });
+  };
+
+  onSelectedCountryFavClick = event => {
+    //defining selected song
+    const target = event.target.dataset.id;
+    const number = event.target.dataset.no;
+
+    const country = this.state.countryBottom;
+    //let newArray = [];
+    //const topSongsArr = [
+    //country[0].topSongs,
+    //country[1].topSongs,
+    //country[2].topSongs
+    //];
+    // topSongsArr.forEach(el => newArray.push(...el));
+
+    const countryIndex = country[0].topSongs.findIndex(
+      el => el.id === parseFloat(target)
+    );
+
+    const songItem = {
+      track: country[0].topSongs[countryIndex].track,
+      album: country[0].topSongs[countryIndex].album,
+      artist: country[0].topSongs[countryIndex].artist,
+      id: country[0].topSongs[countryIndex].id,
+      favClicked: true,
+      addedToFav: true
+    };
+
+    //toggling fav icons empty/full heart
+    this.setState(prevState => {
+      const country = prevState.countryBottom;
 
       country[0].topSongs.forEach(el => {
         if (el.id === parseFloat(target) && el.number === parseFloat(number)) {
@@ -273,27 +343,11 @@ class App extends Component {
         }
       });
 
-      country[1].topSongs.forEach(el => {
-        if (el.id === parseFloat(target) && el.number === parseFloat(number)) {
-          el.favClicked = !el.favClicked;
-        } else {
-          return;
-        }
-      });
-
-      country[2].topSongs.forEach(el => {
-        if (el.id === parseFloat(target) && el.number === parseFloat(number)) {
-          el.favClicked = !el.favClicked;
-        } else {
-          return;
-        }
-      });
-
       return {
-        countries: country
+        countryBottom: country
       };
     });
-
+    //conditionally pushing defined song to Favs
     this.setState(prevState => {
       const prevFavArray = prevState.favsArray;
       const alreadyFav = prevFavArray.find(
@@ -338,6 +392,7 @@ class App extends Component {
           searchChange={this.onCountrySearchChange}
           countryBottom={this.state.countryBottom}
           onCountryFavClick={this.onCountryFavClick}
+          onSelectedCountryFavClick={this.onSelectedCountryFavClick}
         />
         <Footer />
       </div>

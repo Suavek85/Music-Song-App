@@ -20,6 +20,7 @@ const CountriesList = ({ countries, onCountryFavClick }) => {
             fadeTop={el.fadeTop}
             fadeRight={el.fadeRight}
             fadeLeft={el.fadeLeft}
+            showSongs={el.showSongs}
             onCountryFavClick={onCountryFavClick}
           />
         );
