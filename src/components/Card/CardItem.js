@@ -20,9 +20,14 @@ const CardItem = props => {
     top: "10px",
     right: "10px"
   };
+
+  const logoStyle = {
+    height: "120px",
+    width: "120px"
+  }
   
   return (
-    <article className=" mw5 center relative bg-white br3 pa3 pa4-ns mv5 ba b--black-10">
+    <article className=" w-25 w-40-m center relative bg-near-white br3 pa3 pa4-ns mv5 ba b--black-10">
       <div
         className="fav-wrapper grow-hov"
         style={leftStyle}
@@ -35,7 +40,7 @@ const CardItem = props => {
         {props.addedToFav ? <GreyBin /> : null }
       </div>
       <div className="tc">
-        <Logo />
+        <Logo style={logoStyle}/>
         <h1 className="f3 mb2 pb3 dark-red">{props.track}</h1>
         <h2 className="f5 fw4 gray mt0">
           <span className="dark-red">Artist:</span>

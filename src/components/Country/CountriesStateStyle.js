@@ -4,15 +4,13 @@ import EsBck from "./images/spain.jpg";
 import GenBck from "./images/generic.jpg";
 
 const wrapperBrazil = {
-  width: "60vw",
   height: "350px",
   backgroundImage: `url(${BrazilBck})`,
   backgroundAttachment: 'fixed',
   margin: "100px auto 50px auto"
 };
 
-const wrapperUsa = {
-  width: "60vw",
+const wrapperUsa = {  
   height: "350px",
   backgroundImage: `url(${UsaBck})`,
   backgroundAttachment: 'fixed',
@@ -20,7 +18,7 @@ const wrapperUsa = {
 };
 
 const wrapperEs = {
-  width: "60vw",
+ 
   height: "350px",
   backgroundImage: `url(${EsBck})`,
   backgroundAttachment: 'fixed',
@@ -28,7 +26,6 @@ const wrapperEs = {
 };
 
 const wrapperRandom = {
-  width: "60vw",
   height: "400px",
   backgroundImage: `url(${GenBck})`,
   backgroundAttachment: 'fixed',

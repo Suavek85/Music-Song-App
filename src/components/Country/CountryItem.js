@@ -11,7 +11,7 @@ const CountryItem = props => {
       top={props.fadeTop}
       right={props.fadeRight}
     >
-      <div className="cover bg-left bg-center-l" style={props.wrapperStyle}>
+      <div className="cover w-60 w-90-m bg-left bg-center-l" style={props.wrapperStyle}>
         <div className="bg-black-80 pb5 pb6-m pb7-l h-inherit">
           <div style={props.textStyle}>
             {props.button ? (
