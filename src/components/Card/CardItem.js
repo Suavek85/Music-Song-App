@@ -4,42 +4,15 @@ import RedFavoriteEmpty from "../Icons/FavoriteIcon/FavoriteIcon";
 import RedFavoriteFull from "../Icons/FavoriteIconFull/FavoriteIconFull";
 import GreyBin from "../Icons/BinIcon/BinIcon";
 import { YoutubeIcon } from "../Icons/Youtube/Youtube";
+import { youTubeUrl } from "../../containers/API";
+import {
+  leftStyle,
+  secondLeftStyle,
+  rightStyle,
+  logoStyle
+} from "./CardItemStyle";
 
 const CardItem = props => {
-  const leftStyle = {
-    height: "32px",
-    width: "32px",
-    position: "absolute",
-    top: "10px",
-    left: "10px"
-  };
-
-  const secondLeftStyle = {
-    height: "32px",
-    width: "32px",
-    position: "absolute",
-    top: "10px",
-    left: "40px",
-    marginLeft: "7px"
-  };
-
-  const rightStyle = {
-    height: "26px",
-    width: "26px",
-    position: "absolute",
-    top: "10px",
-    right: "10px"
-  };
-
-  const logoStyle = {
-    height: "120px",
-    width: "120px"
-  };
-
-  const youTubeUrl = (song, artist) => {
-    return `https://www.youtube.com/results?search_query=${song}+${artist}`;
-  };
-
   return (
     <article className=" w-25 w-40-m mh3 relative bg-near-white br3 pa3 pa4-ns mv5 ba b--black-10">
       <div

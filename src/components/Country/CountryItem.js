@@ -3,11 +3,10 @@ import Fade from "react-reveal/Fade";
 import RedFavoriteFull from "../Icons/FavoriteIconFull/FavoriteIconFull";
 import RedFavoriteEmpty from "../Icons/FavoriteIcon/FavoriteIcon";
 import { YoutubeIconWhite } from "../Icons/Youtube/Youtube";
+import { youTubeUrl } from "../../containers/API";
 
 const CountryItem = props => {
-  const youTubeUrl = (song, artist) => {
-    return `https://www.youtube.com/results?search_query=${song}+${artist}`;
-  };
+  
   return (
     <Fade
       duration={2000}
