@@ -2,8 +2,12 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 import RedFavoriteFull from "../Icons/FavoriteIconFull/FavoriteIconFull";
 import RedFavoriteEmpty from "../Icons/FavoriteIcon/FavoriteIcon";
+import { YoutubeIconWhite } from "../Icons/Youtube/Youtube";
 
 const CountryItem = props => {
+  const youTubeUrl = (song, artist) => {
+    return `https://www.youtube.com/results?search_query=${song}+${artist}`;
+  };
   return (
     <Fade
       duration={2000}
@@ -11,7 +15,10 @@ const CountryItem = props => {
       top={props.fadeTop}
       right={props.fadeRight}
     >
-      <div className="cover w-60 w-90-m bg-left bg-center-l" style={props.wrapperStyle}>
+      <div
+        className="cover w-60 w-90-m bg-left bg-center-l"
+        style={props.wrapperStyle}
+      >
         <div className="bg-black-80 pb5 pb6-m pb7-l h-inherit">
           <div style={props.textStyle}>
             {props.button ? (
@@ -37,7 +44,7 @@ const CountryItem = props => {
           </div>
           {props.showSongs ? (
             <div>
-              <p className="mb4 ml5 tl">
+              <div className="mb4 ml5 tl flex items-center ">
                 <span style={props.circleStyle}>1</span>
                 <span className="white pl3 pr1 washed-red">
                   {props.topSongs[0].track}
@@ -58,9 +65,21 @@ const CountryItem = props => {
                     <RedFavoriteEmpty />
                   )}
                 </span>
-              </p>
-              <p className="mb4 mt1 ml5 tl">
-                <span style={props.circleStyle}>2</span>
+                <a
+                  href={youTubeUrl(
+                    props.topSongs[0].track,
+                    props.topSongs[0].artist
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginLeft: "5px" }}
+                  className="fav-wrapper grow-hov"
+                >
+                  <YoutubeIconWhite />
+                </a>
+              </div>
+              <div className="mb4 ml5 tl flex items-center ">
+                <span style={props.circleStyle}>1</span>
                 <span className="white pl3 pr1 washed-red">
                   {props.topSongs[1].track}
                 </span>
@@ -80,9 +99,21 @@ const CountryItem = props => {
                     <RedFavoriteEmpty />
                   )}
                 </span>
-              </p>
-              <p className="mb4 mt1  ml5 tl">
-                <span style={props.circleStyle}>3</span>
+                <a
+                  href={youTubeUrl(
+                    props.topSongs[1].track,
+                    props.topSongs[1].artist
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginLeft: "5px" }}
+                  className="fav-wrapper grow-hov"
+                >
+                  <YoutubeIconWhite />
+                </a>
+              </div>
+              <div className="mb4 ml5 tl flex items-center ">
+                <span style={props.circleStyle}>1</span>
                 <span className="white pl3 pr1 washed-red">
                   {props.topSongs[2].track}
                 </span>
@@ -102,7 +133,19 @@ const CountryItem = props => {
                     <RedFavoriteEmpty />
                   )}
                 </span>
-              </p>
+                <a
+                  href={youTubeUrl(
+                    props.topSongs[2].track,
+                    props.topSongs[2].artist
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ marginLeft: "5px" }}
+                  className="fav-wrapper grow-hov"
+                >
+                  <YoutubeIconWhite />
+                </a>
+              </div>
             </div>
           ) : null}
         </div>

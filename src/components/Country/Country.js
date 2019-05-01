@@ -2,15 +2,15 @@ import React from "react";
 import CountriesList from "./CountriesList";
 import CountryList from "./CountryList";
 
-const Country = ({ countries, buttonClick, searchChange, countryBottom, onCountryFavClick, onSelectedCountryFavClick }) => {
+const Country = (props) => {
   return (
     <div>
-      <CountriesList countries={countries} onCountryFavClick={onCountryFavClick} />
+      <CountriesList countries={props.countries} onCountryFavClick={props.onCountryFavClick} />
       <CountryList
-        buttonClick={buttonClick}
-        searchChange={searchChange}
-        countryBottom={countryBottom}
-        onCountryFavClick={onSelectedCountryFavClick}
+        buttonClick={props.buttonClick}
+        searchChange={props.searchChange}
+        countryBottom={props.countryBottom}
+        onCountryFavClick={props.onSelectedCountryFavClick}
       />
     </div>
   );

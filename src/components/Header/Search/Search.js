@@ -2,11 +2,11 @@ import React from 'react';
 import './Search.css';
 
 
-const Search = ({ headerSearch, searchChange }) => {
+const Search = props => {
   return (
     <form className="search white-70" action="">
-      <input type="search" onChange={searchChange} placeholder="Justin Bieber" required />
-      <button type="button" onClick={headerSearch}>Search</button>
+      <input type="search" onChange={props.searchChange} placeholder="Justin Bieber" required />
+      <button type="button" onClick={props.headerSearch}>Search</button>
     </form>  
   );
 }

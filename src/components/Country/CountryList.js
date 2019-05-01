@@ -1,10 +1,10 @@
 import React from "react";
 import CountryItem from "./CountryItem";
 
-const CountryList= ({ countryBottom, searchChange, buttonClick, onCountryFavClick }) => {
+const CountryList = props => {
   return (
     <div>
-        {countryBottom.map(el => {
+        {props.countryBottom.map(el => {
         return (
           <CountryItem
             wrapperStyle={el.wrapperStyle}
@@ -19,9 +19,9 @@ const CountryList= ({ countryBottom, searchChange, buttonClick, onCountryFavClic
             fadeLeft={el.fadeLeft}
             button={el.button}
             showSongs={el.showSongs}
-            searchChange={searchChange}
-            buttonClick={buttonClick}
-            onCountryFavClick={onCountryFavClick}
+            searchChange={props.searchChange}
+            buttonClick={props.buttonClick}
+            onCountryFavClick={props.onCountryFavClick}
           />
         );
     })}

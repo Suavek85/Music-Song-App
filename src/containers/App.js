@@ -16,20 +16,16 @@ import scrollDownSmooth from "../components/Animations/Animations";
 import "./App.css";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      input: "Justin Bieber",
-      inputCountry: "",
-      isLoading: true,
-      cardsShow: true,
-      music: musicState,
-      countries: countriesMain,
-      countryBottom: countrySelected,
-      favsArray: []
-    };
-  }
+  state = {
+    input: "Justin Bieber",
+    inputCountry: "",
+    isLoading: true,
+    cardsShow: true,
+    music: musicState,
+    countries: countriesMain,
+    countryBottom: countrySelected,
+    favsArray: []
+  };
 
   componentDidMount() {
     // LOAD PLACEHOLDER SONGS
@@ -288,6 +284,7 @@ class App extends Component {
         countries: country
       };
     });
+
     //conditionally pushing defined song to Favs
     this.setState(prevState => {
       const prevFavArray = prevState.favsArray;
@@ -308,20 +305,10 @@ class App extends Component {
     //defining selected song
     const target = event.target.dataset.id;
     const number = event.target.dataset.no;
-
     const country = this.state.countryBottom;
-    //let newArray = [];
-    //const topSongsArr = [
-    //country[0].topSongs,
-    //country[1].topSongs,
-    //country[2].topSongs
-    //];
-    // topSongsArr.forEach(el => newArray.push(...el));
-
     const countryIndex = country[0].topSongs.findIndex(
       el => el.id === parseFloat(target)
     );
-
     const songItem = {
       track: country[0].topSongs[countryIndex].track,
       album: country[0].topSongs[countryIndex].album,
@@ -330,11 +317,10 @@ class App extends Component {
       favClicked: true,
       addedToFav: true
     };
-
+    
     //toggling fav icons empty/full heart
     this.setState(prevState => {
       const country = prevState.countryBottom;
-
       country[0].topSongs.forEach(el => {
         if (el.id === parseFloat(target) && el.number === parseFloat(number)) {
           el.favClicked = !el.favClicked;
@@ -342,7 +328,6 @@ class App extends Component {
           return;
         }
       });
-
       return {
         countryBottom: country
       };

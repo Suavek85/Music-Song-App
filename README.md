@@ -38,6 +38,8 @@ My own idea![🤓](https://mail.google.com/mail/e/1f913), created from scratch.[
 
 - removing songs from the Favorite section
 
+- watching any of the songs searched or saved on Youtube 
+
 
 ## Setup
 
