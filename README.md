@@ -26,19 +26,17 @@ My own idea![🤓](https://mail.google.com/mail/e/1f913), created from scratch.[
 
 - finding current top 3 songs of any musician or band
 
-- displays top 3 songs in selected countries
-
 - showing top 3 singles chart for Brazil, USA, Spain
 
 - finding top 3 singles chart for any country
 
-- saving any of the above songs in the Favorite section (in progress)
-
-- includes badge displaying number of songs in the Favorite section
+- saving any of the above songs in the Favorite section 
 
 - removing songs from the Favorite section
 
-- watching any of the songs searched or saved on Youtube 
+- includes badge displaying number of songs in the Favorite section
+
+- watching any of the songs searched or saved in Favories on Youtube 
 
 
 ## Setup
@@ -63,7 +61,7 @@ To run this project, install it locally using npm:
 
 - React Reveal,
 
-- ES Lint Airbnb styling.
+- ES Lint Airbnb.
 
 ## Status
 

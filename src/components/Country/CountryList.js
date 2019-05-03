@@ -1,5 +1,5 @@
 import React from "react";
-import CountryItem from "./CountryItem";
+import CountryItem from "./CountryItem/CountryItem";
 
 const CountryList = props => {
   return (

@@ -96,17 +96,18 @@ class App extends Component {
 
   onCardFavClick = event => {
     //defining selected song
-    if (this.state.cardsShow) {
+    const {cardsShow, music} = this.state;
+    if (cardsShow) {
       const target = event.target.dataset.id;
-      const songIndex = this.state.music.findIndex(
+      const songIndex = music.findIndex(
         el => el.id === parseFloat(target)
       );
       const songItem = {
-        track: this.state.music[songIndex].track,
-        album: this.state.music[songIndex].album,
-        artist: this.state.music[songIndex].artist,
-        id: this.state.music[songIndex].id,
-        favClicked: !this.state.music[songIndex].favClicked,
+        track: music[songIndex].track,
+        album: music[songIndex].album,
+        artist: music[songIndex].artist,
+        id: music[songIndex].id,
+        favClicked: !music[songIndex].favClicked,
         addedToFav: true
       };
 
@@ -317,7 +318,7 @@ class App extends Component {
       favClicked: true,
       addedToFav: true
     };
-    
+
     //toggling fav icons empty/full heart
     this.setState(prevState => {
       const country = prevState.countryBottom;
@@ -349,18 +350,25 @@ class App extends Component {
   };
 
   render() {
+    const {
+      favsArray,
+      isLoading,
+      cardsShow,
+      countries,
+      countryBottom
+    } = this.state;
     return (
       <div className="App">
         <Header
           searchChange={this.onSearchChange}
           headerSearch={this.onHeaderSearch}
           showFavs={this.onShowFavs}
-          countFavs={this.state.favsArray.length}
+          countFavs={favsArray.length}
         />
-        <Spinner loading={this.state.isLoading} />
+        <Spinner loading={isLoading} />
         <CardList
           onFavClick={this.onCardFavClick}
-          cardsShow={this.state.cardsShow}
+          cardsShow={cardsShow}
           music={this.state.music}
           input={this.state.input}
         />
@@ -368,14 +376,14 @@ class App extends Component {
           onFavClick={this.onFavClick}
           closeFavs={this.onCloseFavs}
           removeFavs={this.onRemoveFavs}
-          cardsShow={this.state.cardsShow}
-          music={this.state.favsArray}
+          cardsShow={cardsShow}
+          music={favsArray}
         />
         <Country
-          countries={this.state.countries}
+          countries={countries}
           buttonClick={this.onCountryButtonClick}
           searchChange={this.onCountrySearchChange}
-          countryBottom={this.state.countryBottom}
+          countryBottom={countryBottom}
           onCountryFavClick={this.onCountryFavClick}
           onSelectedCountryFavClick={this.onSelectedCountryFavClick}
         />

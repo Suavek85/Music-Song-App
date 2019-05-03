@@ -1,18 +1,18 @@
 import React from 'react';
 import CardItem from './CardItem';
 
-const CardList = ({ cardsShow, music, onFavClick, input }) => {
-  if (cardsShow) {
+const CardList = (props) => {
+  if (props.cardsShow) {
     return (
       <div>
         <h1 className="f1 lh-title gray">
-                Top Songs by "{input}"
+                Top Songs by "{props.input}"
         </h1>
         <div className="flex flex-wrap relative justify-center">
-          {music.map(el => {
+          {props.music.map(el => {
             return (
               <CardItem
-                onFavClick={onFavClick}
+                onFavClick={props.onFavClick}
                 key={el.id}
                 id={el.id}
                 track={el.track}
